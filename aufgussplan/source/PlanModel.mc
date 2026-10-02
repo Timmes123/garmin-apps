@@ -15,6 +15,7 @@ class PlanModel {
     const API_URL = "https://api.github.com/repos/Timmes123/garmin-apps/";
     const POLL_TICKS = 2;
     const MAX_POLLS = 12;
+    const QUIET_POLLS = 4;
     const DEFAULT_SAUNA = "obermaintherme";
     const LEAD_CHOICES = [5, 10, 15, 20];
 
@@ -22,6 +23,7 @@ class PlanModel {
     const KEY_INDEX = "index";
     const KEY_MARKS = "marks";
     const KEY_LEAD = "lead";
+    const KEY_CHECKED = "checked";
 
     var plan as Dictionary?;
     var entries as Array = [];
@@ -31,6 +33,7 @@ class PlanModel {
     // true, solange GitHub den heutigen Tagesplan erst noch von der Website holt
     var loading as Boolean = false;
 
+    private var _checking as Boolean = false;
     private var _polls as Number = 0;
     private var _pollIn as Number = 0;
     private var _statusTicks as Number = 0;
@@ -280,6 +283,7 @@ class PlanModel {
         _manual = manual;
         _polls = 0;
         _pollIn = 0;
+        _checking = false;
         loading = false;
         if (manual) {
             setStatus("Lade ...");
@@ -299,21 +303,40 @@ class PlanModel {
         );
     }
 
-    // ---- Tagespläne: GitHub liest sie erst auf Anforderung von der Website ----
+    // ---- Abgleich mit der Website: GitHub liest sie nur, wenn die Uhr es anfordert ----
 
-    private function needsLiveUpdate() as Boolean {
+    private function isStale() as Boolean {
         var stored = PlanStore.getPlan();
         return stored != null && stored["live"] == 1 && PlanStore.isOutdated(stored);
     }
 
-    private function startLiveUpdate() as Void {
+    // Tagespläne von gestern immer, sonst einmal am Tag oder auf Wunsch
+    private function needsCheck() as Boolean {
+        if (isStale() || _manual) {
+            return true;
+        }
+        var checked = Application.Storage.getValue(KEY_CHECKED);
+        return !(checked instanceof Array && saunaId().equals(checked[0]) && checked[1] == PlanStore.todayNumber());
+    }
+
+    private function startCheck() as Void {
+        var stale = isStale();
         var token = WatchUi.loadResource(Rez.Strings.GithubToken) as String;
         if (token.length() == 0) {
-            setStatus("Kein Token");
+            if (stale) {
+                setStatus("Kein Token");
+            } else if (_manual) {
+                setStatus("Aktuell");
+            }
             return;
         }
-        loading = true;
-        setStatus("Hole Plan");
+        _checking = true;
+        loading = stale;
+        if (stale) {
+            setStatus("Hole Plan");
+        } else if (_manual) {
+            setStatus("Prüfe ...");
+        }
         Communications.makeWebRequest(
             API_URL + "actions/workflows/update-plans.yml/dispatches",
             { "ref" => "main", "inputs" => { "sauna" => saunaId() } },
@@ -334,12 +357,23 @@ class PlanModel {
     // GitHub antwortet bei Erfolg mit leerem 204; nur klare Ablehnungen sind Fehler
     function onDispatch(code as Number, data as Dictionary or String or Null) as Void {
         if (code == 401 || code == 403 || code == 404 || code == 422) {
-            loading = false;
-            setStatus("Fehler " + code);
+            finishCheck((loading || _manual) ? "Fehler " + code : null);
             return;
         }
+        Application.Storage.setValue(KEY_CHECKED, [saunaId(), PlanStore.todayNumber()]);
         _polls = 0;
         _pollIn = POLL_TICKS;
+    }
+
+    private function finishCheck(text as String?) as Void {
+        _checking = false;
+        loading = false;
+        _pollIn = 0;
+        if (text != null) {
+            setStatus(text);
+        } else {
+            WatchUi.requestUpdate();
+        }
     }
 
     private function pollLivePlan() as Void {
@@ -362,42 +396,41 @@ class PlanModel {
     function onPlan(code as Number, data as Dictionary or String or Null) as Void {
         var previous = _previousSauna;
         _previousSauna = null;
-        if (code == 200 && data instanceof Dictionary && data["schedules"] instanceof Array) {
+        var first = !_checking;
+        var updated = false;
+        var valid = code == 200 && data instanceof Dictionary && data["schedules"] instanceof Array;
+        if (valid) {
             var stored = PlanStore.getPlan();
             var switched = stored == null || !saunaId().equals(stored["id"]);
-            var updated = switched || PlanStore.versionOf(data) > PlanStore.versionOf(stored as Dictionary);
+            updated = switched || PlanStore.versionOf(data as Dictionary) > PlanStore.versionOf(stored as Dictionary);
             if (updated) {
-                PlanStore.setPlan(data);
+                PlanStore.setPlan(data as Dictionary);
                 if (switched) {
                     Application.Storage.deleteValue(KEY_MARKS);
                     rebuildPending();
                 }
                 reload();
             }
-            if (needsLiveUpdate()) {
-                if (!loading) {
-                    startLiveUpdate();
-                } else if (_polls < MAX_POLLS) {
-                    _pollIn = POLL_TICKS;
-                } else {
-                    loading = false;
-                    setStatus("Kein Tagesplan");
-                }
-            } else {
-                loading = false;
-                if (updated) {
-                    setStatus("Aktualisiert");
-                } else if (_manual) {
-                    setStatus("Aktuell");
-                }
-            }
-        } else if (loading) {
-            // Abfrage während des Wartens fehlgeschlagen: weiter versuchen
-            if (_polls < MAX_POLLS) {
+        }
+        if (_checking) {
+            // Warten auf das Ergebnis der Action: Tagesplan von heute bzw. eine neue Version
+            var done = valid && (loading ? !isStale() : updated);
+            if (done) {
+                finishCheck("Aktualisiert");
+            } else if (_polls < (loading ? MAX_POLLS : QUIET_POLLS)) {
                 _pollIn = POLL_TICKS;
+            } else if (loading) {
+                finishCheck("Kein Tagesplan");
             } else {
-                loading = false;
-                setStatus("Fehler " + code);
+                finishCheck(_manual ? "Aktuell" : null);
+            }
+        } else if (valid) {
+            if (needsCheck()) {
+                startCheck();
+            } else if (updated) {
+                setStatus("Aktualisiert");
+            } else if (_manual) {
+                setStatus("Aktuell");
             }
         } else {
             if (previous != null) {
@@ -407,7 +440,7 @@ class PlanModel {
                 setStatus("Fehler " + code);
             }
         }
-        if (!_manual) {
+        if (first && !_manual) {
             request("index.json", method(:onIndex));
         }
     }

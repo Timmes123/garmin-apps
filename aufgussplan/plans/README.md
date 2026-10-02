@@ -23,10 +23,19 @@ Eine JSON-Datei pro Sauna. Die Uhr lädt die Datei über
 ## Automatische Aktualisierung
 
 Es werden nur Saunen aufgenommen, deren Plan sich per Skript von der Website lesen lässt.
-`scripts/update_plans.py` hat pro Sauna eine Funktion dafür; die GitHub Action
-`.github/workflows/update-plans.yml` ruft es jeden Montag auf und committet Änderungen
-(von Hand: Actions → „Aufgusspläne aktualisieren“ → Run workflow). Felder außerhalb von
-`entries` (z. B. `lateDays`, `lateRanges`) werden nicht automatisch gepflegt.
+`scripts/update_plans.py` hat pro Sauna eine Funktion dafür. Es gibt keinen Zeitplan:
+Die Uhr startet beim Öffnen der App (höchstens einmal am Tag je Sauna, oder über
+„Plan aktualisieren“) die GitHub Action `.github/workflows/update-plans.yml` für ihre Sauna
+und lädt danach die neue Datei. Dafür braucht die App einen GitHub-Token, den `build.sh`
+aus `.keys/github_token.txt` einbaut (Fine-grained, nur dieses Repo, „Actions: Read and write“).
+
+- Wochenpläne (Obermain Therme): geschrieben wird nur bei Änderungen. Felder außerhalb von
+  `entries` (z. B. `lateDays`, `lateRanges`) werden nicht automatisch gepflegt.
+- Tagespläne (`"live": 1`, Fürthermare): `date` nennt den Tag, für den der Plan gilt; an
+  anderen Tagen zeigt die App ihn nicht an und fordert einen neuen an.
+
+Weitere Felder: `scale` = höchste Stufe der Intensitätsskala, `entries[].g` = Merkmale
+wie „Musik“, `entries[].d` = Düfte.
 
 ## Neue Sauna hinzufügen
 

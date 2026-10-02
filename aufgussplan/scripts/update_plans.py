@@ -105,7 +105,7 @@ def fuerthermare():
     return entries
 
 
-# Wochenpläne prüft die Action regelmäßig; Tagespläne ("live") nur, wenn die Uhr sie anfordert
+# Die Uhr fordert beim Öffnen der App genau ihre Sauna an; ohne Angabe gilt SCHEDULED
 SCRAPERS = {"obermaintherme": obermaintherme, "fuerthermare": fuerthermare}
 SCHEDULED = ["obermaintherme"]
 

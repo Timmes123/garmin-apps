@@ -1,12 +1,11 @@
 name: Aufgusspläne aktualisieren
 
 on:
-  schedule:
-    - cron: "0 5 * * 1"   # montags 05:00 UTC
+  # Kein Zeitplan: die Uhr stößt den Lauf beim Öffnen der App an
   workflow_dispatch:
     inputs:
       sauna:
-        description: "Nur diese Sauna lesen (leer = alle Wochenpläne)"
+        description: "Nur diese Sauna lesen (leer = Obermain Therme)"
         required: false
         default: ""
 

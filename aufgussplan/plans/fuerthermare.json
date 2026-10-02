@@ -2,11 +2,11 @@
   "id": "fuerthermare",
   "name": "Fürthermare",
   "city": "Fürth",
-  "version": 3,
+  "version": 4,
   "updated": "2026-10-02",
   "source": "https://www.fuerthermare.de/sauna/aufgussplan",
   "live": 1,
-  "date": 20261001,
+  "date": 20261002,
   "scale": 5,
   "schedules": [
     {
@@ -20,13 +20,13 @@
         7
       ],
       "entries": [
-        {"t": "20:00", "n": "el fuego del sol", "s": "casa del sol", "c": "90°C", "i": [5], "g": "Natursud", "d": "Birkensud, Mandarine grün, Kaminfeuer, Orange süß"},
         {"t": "20:00", "n": "Aufguss", "s": "casa bella vista", "c": "85°C", "i": [3], "d": "Grapefruit, Wacholderholz, mareMix"},
+        {"t": "20:00", "n": "el fuego del sol", "s": "casa del sol", "c": "90°C", "i": [5], "g": "Natursud", "d": "Birkensud, Mandarine grün, Kaminfeuer, Orange süß"},
         {"t": "21:00", "n": "Aufguss", "s": "casa del sol", "c": "90°C", "i": [3], "d": "Fichte, mareFit, Cajeput"},
         {"t": "21:00", "n": "Wellness-Aufguss", "s": "casa grande", "c": "85°C", "i": [2], "g": "Musik, Ruhe-Aufguss", "d": "Hoblätter, Eukalyptus citriodora, Latschenkiefer & Blutorange"},
         {"t": "21:00", "n": "Salz-Peeling", "s": "Dampfbad", "c": "EG", "r": 1, "d": "Peeling-Salz mit wechselnden Aromen"},
-        {"t": "22:00", "n": "heiße Brise", "s": "casa del sol", "c": "90°C", "i": [4], "d": "Orange bitter, Cederholz Himalaya & Zitrone, Heublume"},
-        {"t": "22:00", "n": "Gute-Nacht-Aufguss", "s": "casa bella vista", "c": "85°C", "i": [3], "d": "Litsea, Kampfer, Krauseminze"}
+        {"t": "22:00", "n": "Gute-Nacht-Aufguss", "s": "casa bella vista", "c": "85°C", "i": [3], "d": "Litsea, Kampfer, Krauseminze"},
+        {"t": "22:00", "n": "heiße Brise", "s": "casa del sol", "c": "90°C", "i": [4], "d": "Orange bitter, Cederholz Himalaya & Zitrone, Heublume"}
       ]
     }
   ]

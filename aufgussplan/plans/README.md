@@ -20,9 +20,18 @@ Eine JSON-Datei pro Sauna. Die Uhr lädt die Datei über
 | `entries[].r` | `1` = Maske/Ritual statt Aufguss (in der App ausblendbar) |
 | `entries[].l` | `1` = findet nur bei langer Öffnung statt |
 
+## Automatische Aktualisierung
+
+Es werden nur Saunen aufgenommen, deren Plan sich per Skript von der Website lesen lässt.
+`scripts/update_plans.py` hat pro Sauna eine Funktion dafür; die GitHub Action
+`.github/workflows/update-plans.yml` ruft es jeden Montag auf und committet Änderungen
+(von Hand: Actions → „Aufgusspläne aktualisieren“ → Run workflow). Felder außerhalb von
+`entries` (z. B. `lateDays`, `lateRanges`) werden nicht automatisch gepflegt.
+
 ## Neue Sauna hinzufügen
 
-1. `<id>.json` nach dem Format oben anlegen (`id` in der Datei = Dateiname).
-2. Die Sauna in `index.json` eintragen (`id`, `name`, `city`).
+1. In `scripts/update_plans.py` eine Funktion schreiben, die die Einträge liest, und in `SCRAPERS` eintragen.
+2. `<id>.json` mit Kopfdaten und leerem `entries` anlegen (`id` in der Datei = Dateiname).
+3. Die Sauna in `index.json` eintragen (`id`, `name`, `city`).
 
 Die App lädt `index.json` bei jedem Start und zeigt die Saunen im Menü unter „Sauna“.

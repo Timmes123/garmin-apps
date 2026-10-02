@@ -1,0 +1,68 @@
+{
+  "id": "carolusthermen",
+  "name": "Carolus Thermen",
+  "city": "Aachen",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://carolus-thermen.de/aufgussplan/",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4, 5],
+      "entries": [
+        {"t": "10:00", "n": "Guten Morgen", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "10:30", "n": "Honig-Einreibung", "s": "Halvet", "r": 1},
+        {"t": "11:00", "n": "Heiß und Salzig", "s": "Aufgusssauna Außen", "c": "sehr starker Aufguss", "i": [4]},
+        {"t": "12:00", "n": "Wenik", "s": "Aufgusssauna Innen", "c": "mit großer Wassermenge", "i": [4]},
+        {"t": "12:30", "n": "Kaffee-Peeling", "s": "Feminarium", "c": "mit Voranmeldung an der Saunatheke", "r": 1},
+        {"t": "12:30", "n": "Backen", "s": "Backstube", "c": "Laugengebäck", "r": 1},
+        {"t": "13:00", "n": "Pure Entspannung", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "13:30", "n": "Kaffee-Peeling", "s": "Bingül", "r": 1},
+        {"t": "14:00", "n": "Waldsauna", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "15:00", "n": "Honig-Einreibung", "s": "Halvet", "r": 1},
+        {"t": "15:30", "n": "Überraschung", "s": "Aufgusssauna Innen", "i": [3]},
+        {"t": "16:00", "n": "Backen", "s": "Backstube", "c": "Laugengebäck", "r": 1},
+        {"t": "17:00", "n": "Hexen-Banya", "s": "Aufgusssauna Innen", "i": [3]},
+        {"t": "17:30", "n": "Kaffee-Peeling", "s": "Feminarium", "c": "mit Voranmeldung an der Saunatheke", "r": 1},
+        {"t": "18:00", "n": "Heiß und Salzig", "s": "Aufgusssauna Außen", "c": "sehr starker Aufguss", "i": [4]},
+        {"t": "19:00", "n": "Weltreise", "s": "Aufgusssauna Innen", "i": [3]},
+        {"t": "19:00", "n": "Teezeremonie", "s": "Aufgusssauna Außen", "i": [3]},
+        {"t": "19:30", "n": "Honig-Einreibung", "s": "Halvet", "r": 1},
+        {"t": "20:00", "n": "Wenik", "s": "Aufgusssauna Innen", "c": "mit großer Wassermenge", "i": [4]},
+        {"t": "20:00", "n": "Atemfrei", "s": "Aufgusssauna Außen", "i": [2]},
+        {"t": "21:00", "n": "Pure Entspannung", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "22:00", "n": "Gute Nacht", "s": "Aufgusssauna Innen", "i": [1]}
+      ]
+    },
+    {
+      "days": [6, 7],
+      "entries": [
+        {"t": "10:00", "n": "Guten Morgen", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "10:30", "n": "Honig-Einreibung", "s": "Halvet", "r": 1},
+        {"t": "11:00", "n": "Heiß und Salzig", "s": "Aufgusssauna Außen", "c": "sehr starker Aufguss", "i": [4]},
+        {"t": "12:00", "n": "Wenik", "s": "Aufgusssauna Innen", "c": "mit großer Wassermenge", "i": [4]},
+        {"t": "12:30", "n": "Kaffee-Peeling", "s": "Feminarium", "c": "mit Voranmeldung an der Saunatheke", "r": 1},
+        {"t": "12:30", "n": "Backen", "s": "Backstube", "c": "Laugengebäck", "r": 1},
+        {"t": "13:00", "n": "Pure Entspannung", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "13:30", "n": "Kaffee-Peeling", "s": "Bingül", "r": 1},
+        {"t": "14:00", "n": "Waldsauna", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "14:30", "n": "Honig-Einreibung", "s": "Halvet", "r": 1},
+        {"t": "15:00", "n": "Überraschung", "s": "Aufgusssauna Innen", "i": [3]},
+        {"t": "15:00", "n": "Zauber des Orients", "s": "Aufgusssauna Außen", "i": [3]},
+        {"t": "16:00", "n": "Herbst-Entspannung", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "16:00", "n": "Vitalquelle", "s": "Aufgusssauna Außen", "i": [3]},
+        {"t": "16:00", "n": "Backen", "s": "Backstube", "c": "Laugengebäck", "r": 1},
+        {"t": "17:00", "n": "Apfelernte", "s": "Aufgusssauna Außen", "i": [3]},
+        {"t": "17:00", "n": "Hexen-Banya", "s": "Aufgusssauna Innen", "i": [3]},
+        {"t": "17:30", "n": "Kaffee-Peeling", "s": "Feminarium", "c": "mit Voranmeldung an der Saunatheke", "r": 1},
+        {"t": "18:00", "n": "Heiß und Salzig", "s": "Aufgusssauna Außen", "c": "sehr starker Aufguss", "i": [4]},
+        {"t": "19:00", "n": "Weltreise", "s": "Aufgusssauna Innen", "i": [3]},
+        {"t": "19:00", "n": "Teezeremonie", "s": "Aufgusssauna Außen", "i": [3]},
+        {"t": "19:30", "n": "Honig-Einreibung", "s": "Halvet", "r": 1},
+        {"t": "20:00", "n": "Wenik", "s": "Aufgusssauna Innen", "c": "mit großer Wassermenge", "i": [4]},
+        {"t": "20:00", "n": "Atemfrei", "s": "Aufgusssauna Außen", "i": [2]},
+        {"t": "21:00", "n": "Pure Entspannung", "s": "Aufgusssauna Innen", "i": [2]},
+        {"t": "22:00", "n": "Gute Nacht", "s": "Aufgusssauna Innen", "i": [1]}
+      ]
+    }
+  ]
+}

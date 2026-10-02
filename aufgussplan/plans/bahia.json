@@ -1,0 +1,32 @@
+{
+  "id": "bahia",
+  "name": "Bahia Sauna- & Wasserwelten",
+  "city": "Bocholt",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.bahia.de/saunawelt/zeremonien-aufguesse/aufgussplan",
+  "schedules": [
+    {
+      "days": [5],
+      "entries": [
+        {"t": "10:00", "n": "Klassischer Aufguss", "s": "Aufgusssauna", "c": "ca. 90 °C", "i": [3]},
+        {"t": "11:00", "n": "Goedemorgen Aufguss", "s": "Swet Kamer", "c": "ca. 85 °C", "i": [2]},
+        {"t": "12:00", "n": "Bahia Spezial", "s": "Swet Kamer", "c": "ca. 85 °C", "i": [2]},
+        {"t": "12:00", "n": "Traumreise", "s": "Remise", "c": "Zeremonie, Anmeldung", "r": 1},
+        {"t": "13:00", "n": "Aromareise", "s": "Baumhaus", "c": "ca. 75 °C", "i": [1]},
+        {"t": "14:00", "n": "Klassischer Aufguss", "s": "Aufgusssauna", "c": "ca. 90 °C", "i": [3]},
+        {"t": "15:00", "n": "Bahia Spezial", "s": "Swet Kamer", "c": "ca. 85 °C", "i": [2]},
+        {"t": "16:00", "n": "Klassischer Aufguss", "s": "Aufgusssauna", "c": "ca. 90 °C", "i": [3]},
+        {"t": "16:00", "n": "Aromareise", "s": "Baumhaus", "c": "ca. 75 °C", "i": [1]},
+        {"t": "16:00", "n": "Orientalisches Peeling", "s": "Hamam", "c": "14 € p. P.", "r": 1},
+        {"t": "17:00", "n": "Musik Aufguss", "s": "Swet Kamer", "c": "ca. 85 °C", "i": [2]},
+        {"t": "18:00", "n": "Klassischer Aufguss", "s": "Aufgusssauna", "c": "ca. 90 °C", "i": [3]},
+        {"t": "19:00", "n": "Klassischer Aufguss", "s": "Aufgusssauna", "c": "ca. 90 °C", "i": [3]},
+        {"t": "19:00", "n": "Bahia Spezial", "s": "Swet Kamer", "c": "ca. 85 °C", "i": [2]},
+        {"t": "20:00", "n": "Klassischer Aufguss", "s": "Aufgusssauna", "c": "ca. 90 °C", "i": [3]},
+        {"t": "20:00", "n": "Traumreise", "s": "Remise", "c": "Zeremonie, Anmeldung", "r": 1},
+        {"t": "21:00", "n": "Gute Nacht Aufguss", "s": "Swet Kamer", "c": "ca. 85 °C", "i": [2]}
+      ]
+    }
+  ]
+}

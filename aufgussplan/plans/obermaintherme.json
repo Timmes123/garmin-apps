@@ -1,7 +1,8 @@
 {
   "id": "obermaintherme",
   "name": "Obermain Therme",
-  "version": 2,
+  "city": "Bad Staffelstein",
+  "version": 3,
   "updated": "2026-10-02",
   "source": "https://www.obermaintherme.de/saunaland/termine/",
   "lateDays": [4, 5, 6],

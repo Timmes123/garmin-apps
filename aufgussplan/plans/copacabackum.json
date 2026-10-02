@@ -1,0 +1,81 @@
+{
+  "id": "copacabackum",
+  "name": "Copa Ca Backum (Copa Oase)",
+  "city": "Herten",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.copacabackum.de/sauna/sauna-leben/saunaaufguss",
+  "schedules": [
+    {
+      "days": [1],
+      "entries": [
+        {"t": "11:00", "n": "Atemfrei", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "12:00", "n": "Waldluft", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "12:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "13:00", "n": "Copa-Spezial", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "14:00", "n": "Muntermacher", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "15:00", "n": "Relax", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "15:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "16:00", "n": "Fruchtig frisch", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "16:00", "n": "Heiß auf Eis", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "17:00", "n": "Kräuter", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "18:00", "n": "Atemfrei", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "18:00", "n": "Copa-Spezial", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "18:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "19:00", "n": "Symphonie", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "20:00", "n": "Jahreszeiten", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "20:00", "n": "Natur pur", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "21:00", "n": "Abenddämmerung", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"}
+      ]
+    },
+    {
+      "days": [2, 3, 4, 5],
+      "entries": [
+        {"t": "10:00", "n": "Guten Morgen", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "11:00", "n": "Atemfrei", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "12:00", "n": "Waldluft", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "12:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "13:00", "n": "Copa-Spezial", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "14:00", "n": "Muntermacher", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "15:00", "n": "Relax", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "15:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "16:00", "n": "Fruchtig frisch", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "16:00", "n": "Heiß auf Eis", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "17:00", "n": "Kräuter", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "18:00", "n": "Atemfrei", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "18:00", "n": "Copa-Spezial", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "18:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "19:00", "n": "Symphonie", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "20:00", "n": "Jahreszeiten", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "20:00", "n": "Natur pur", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "21:00", "n": "Abenddämmerung", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"}
+      ]
+    },
+    {
+      "days": [6, 7],
+      "entries": [
+        {"t": "10:00", "n": "Guten Morgen", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "11:00", "n": "Atemfrei", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "12:00", "n": "Waldluft", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "12:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "13:00", "n": "Der Klassiker", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "13:00", "n": "Copa-Spezial", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "14:00", "n": "Muntermacher", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "15:00", "n": "Relax", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "15:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "16:00", "n": "Fruchtig frisch", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "16:00", "n": "Heiß auf Eis", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "17:00", "n": "Kräuter", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "17:00", "n": "Zusatz-Aufguss", "s": "Galeriesauna", "c": "nur bei hohem Gästeaufkommen"},
+        {"t": "18:00", "n": "Atemfrei", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "18:00", "n": "Copa-Spezial", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "18:30", "n": "Peeling", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "19:00", "n": "Symphonie", "s": "Sternenhimmelsauna", "c": "Großer Aufguss"},
+        {"t": "19:00", "n": "Zusatz-Aufguss", "s": "Galeriesauna", "c": "nur bei hohem Gästeaufkommen"},
+        {"t": "20:00", "n": "Jahreszeiten", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"},
+        {"t": "20:00", "n": "Natur pur", "s": "Galeriesauna", "c": "Großer Aufguss"},
+        {"t": "21:00", "n": "Abenddämmerung", "s": "Sternenhimmelsauna", "c": "Vitalaufguss"}
+      ]
+    }
+  ]
+}

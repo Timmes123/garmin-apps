@@ -1,0 +1,26 @@
+{
+  "id": "festland-hamburg",
+  "name": "Festland (Bäderland)",
+  "city": "Hamburg",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.baederland.de/wellness/aufgussplaene/",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "entries": [
+        {"t": "11:00", "n": "Citrus Mint Fizz", "s": "Sauna", "c": "95°C", "i": [1]},
+        {"t": "12:00", "n": "Herbalist", "s": "Sauna", "c": "95°C", "i": [2]},
+        {"t": "13:00", "n": "Green Breeze", "s": "Sauna", "c": "95°C", "i": [3]},
+        {"t": "14:00", "n": "Basil Fresh", "s": "Sauna", "c": "95°C", "i": [2]},
+        {"t": "15:00", "n": "Frosty Mint", "s": "Sauna", "c": "95°C", "i": [2]},
+        {"t": "16:00", "n": "Herbalist", "s": "Sauna", "c": "95°C", "i": [2]},
+        {"t": "17:00", "n": "Green Breeze", "s": "Sauna", "c": "95°C", "i": [3]},
+        {"t": "18:00", "n": "Frosty Mint", "s": "Sauna", "c": "95°C", "i": [2]},
+        {"t": "19:00", "n": "Virgin Mojito", "s": "Sauna", "c": "95°C", "i": [2]},
+        {"t": "20:00", "n": "Summer Heat", "s": "Sauna", "c": "95°C", "i": [3]},
+        {"t": "20:30", "n": "Lavender Fields", "s": "Sauna", "c": "95°C", "i": [1]}
+      ]
+    }
+  ]
+}

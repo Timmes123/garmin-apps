@@ -1,0 +1,86 @@
+{
+  "id": "aqualaatzium",
+  "name": "aquaLaatzium",
+  "city": "Laatzen",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://aqualaatzium.de/sauna-aufgussplan/",
+  "schedules": [
+    {
+      "days": [1],
+      "entries": [
+        {"t": "10:30", "n": "kurz & knackig", "s": "Erdsauna"},
+        {"t": "11:00", "n": "Guten Morgen", "s": "Seesauna"},
+        {"t": "12:00", "n": "Peeling-Zeremonie", "s": "Dampfbad", "r": 1},
+        {"t": "12:00", "n": "Fjord-Tour", "s": "Suvisauna"},
+        {"t": "13:00", "n": "Fresh Banja", "s": "Seesauna"},
+        {"t": "13:10", "n": "Kraft der Natur", "s": "Tervasauna", "c": "mit Terva"},
+        {"t": "14:00", "n": "Duftzauber", "s": "Suvisauna"},
+        {"t": "14:10", "n": "Zitrusgarten", "s": "Tervasauna"},
+        {"t": "15:00", "n": "Toskana", "s": "Seesauna"},
+        {"t": "15:30", "n": "Zedernwald", "s": "Suvisauna"},
+        {"t": "16:00", "n": "Terva", "s": "Tervasauna", "c": "mit Terva"},
+        {"t": "17:00", "n": "Banja", "s": "Erdsauna"},
+        {"t": "17:00", "n": "Gewürzbasar", "s": "Seesauna"},
+        {"t": "18:00", "n": "Peeling-Zeremonie", "s": "Dampfbad", "r": 1},
+        {"t": "18:00", "n": "Lapland Original", "s": "Suvisauna"},
+        {"t": "19:00", "n": "Wüstenwind", "s": "Suvisauna"},
+        {"t": "19:30", "n": "Fresh Banja", "s": "Seesauna"},
+        {"t": "20:10", "n": "Surprise! Surprise!", "s": "Suvisauna"},
+        {"t": "20:30", "n": "aqua Spezial", "s": "Tervasauna"},
+        {"t": "21:00", "n": "Zeit für Mich", "s": "Suvisauna"},
+        {"t": "21:15", "n": "Löyly", "s": "Erdsauna"}
+      ]
+    },
+    {
+      "days": [2, 3, 4, 5, 6],
+      "entries": [
+        {"t": "10:30", "n": "kurz & knackig", "s": "Erdsauna"},
+        {"t": "11:00", "n": "Guten Morgen", "s": "Seesauna"},
+        {"t": "12:00", "n": "Peeling-Zeremonie", "s": "Dampfbad", "r": 1},
+        {"t": "12:00", "n": "Fjord-Tour", "s": "Suvisauna"},
+        {"t": "13:00", "n": "Fresh Banja", "s": "Seesauna"},
+        {"t": "13:10", "n": "Kraft der Natur", "s": "Tervasauna", "c": "mit Terva"},
+        {"t": "14:00", "n": "Duftzauber", "s": "Suvisauna"},
+        {"t": "14:10", "n": "Zitrusgarten", "s": "Tervasauna"},
+        {"t": "15:00", "n": "Toskana", "s": "Seesauna"},
+        {"t": "15:10", "n": "Zedernwald", "s": "Suvisauna"},
+        {"t": "16:00", "n": "Terva", "s": "Tervasauna", "c": "mit Terva"},
+        {"t": "16:00", "n": "Minzige Vielfalt", "s": "Seesauna"},
+        {"t": "17:00", "n": "Banja", "s": "Erdsauna"},
+        {"t": "17:00", "n": "Gewürzbasar", "s": "Seesauna"},
+        {"t": "18:00", "n": "Peeling-Zeremonie", "s": "Dampfbad", "r": 1},
+        {"t": "18:00", "n": "Lapland Original", "s": "Suvisauna"},
+        {"t": "19:00", "n": "Wüstenwind", "s": "Suvisauna"},
+        {"t": "19:30", "n": "Fresh Banja", "s": "Seesauna"},
+        {"t": "20:10", "n": "Surprise! Surprise!", "s": "Suvisauna"},
+        {"t": "20:30", "n": "aqua Spezial", "s": "Tervasauna"},
+        {"t": "21:00", "n": "Zeit für Mich", "s": "Suvisauna"},
+        {"t": "21:15", "n": "Löyly", "s": "Erdsauna"}
+      ]
+    },
+    {
+      "days": [7],
+      "entries": [
+        {"t": "10:30", "n": "kurz & knackig", "s": "Erdsauna"},
+        {"t": "11:00", "n": "Guten Morgen", "s": "Suvisauna"},
+        {"t": "12:00", "n": "Peeling-Zeremonie", "s": "Dampfbad", "r": 1},
+        {"t": "12:00", "n": "Fjord-Tour", "s": "Suvisauna"},
+        {"t": "13:00", "n": "Fresh Banja", "s": "Seesauna"},
+        {"t": "13:10", "n": "Kraft der Natur", "s": "Tervasauna", "c": "mit Terva"},
+        {"t": "14:00", "n": "Duftzauber", "s": "Suvisauna"},
+        {"t": "14:10", "n": "Zitrusgarten", "s": "Tervasauna"},
+        {"t": "15:00", "n": "Toskana", "s": "Seesauna"},
+        {"t": "15:10", "n": "Zedernwald", "s": "Suvisauna"},
+        {"t": "16:00", "n": "Terva", "s": "Tervasauna", "c": "mit Terva"},
+        {"t": "16:10", "n": "Minzige Vielfalt", "s": "Seesauna"},
+        {"t": "17:00", "n": "Surprise! Surprise!", "s": "Suvisauna"},
+        {"t": "17:10", "n": "Fresh Banja", "s": "Seesauna"},
+        {"t": "18:00", "n": "Peeling-Zeremonie", "s": "Dampfbad", "r": 1},
+        {"t": "18:00", "n": "Lapland Original", "s": "Suvisauna"},
+        {"t": "19:00", "n": "Löyly", "s": "Erdsauna"},
+        {"t": "19:00", "n": "Zeit für Mich", "s": "Suvisauna"}
+      ]
+    }
+  ]
+}

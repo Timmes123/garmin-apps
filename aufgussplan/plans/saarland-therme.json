@@ -1,0 +1,86 @@
+{
+  "id": "saarland-therme",
+  "name": "Saarland Therme",
+  "city": "Rilchingen-Hanweiler",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://saarland-therme.de/de/sauna/aufgussrituale/",
+  "schedules": [
+    {
+      "days": [7, 1, 2, 3, 4],
+      "entries": [
+        {"t": "10:00", "n": "Klangschalen", "s": "Alhambra Sauna", "c": "1. Etage", "i": [1]},
+        {"t": "10:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "11:00", "n": "Mokka Peeling-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage", "i": [1]},
+        {"t": "11:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "12:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse, mit Musik", "i": [3]},
+        {"t": "12:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "12:45", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "c": "EG", "i": [1]},
+        {"t": "13:00", "n": "Honig-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "14:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "15:00", "n": "Himalaya-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "16:00", "n": "Eisiger Wüstenwind", "s": "Alhambra Sauna", "c": "1. Etage", "i": [3]},
+        {"t": "16:45", "n": "1001 Nacht", "s": "Kelo-Sauna", "c": "EG", "i": [1]},
+        {"t": "17:00", "n": "Honig-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "18:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "19:00", "n": "Sibirischer Wind", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "20:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "21:00", "n": "Orient Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "22:00", "n": "Zauber des Südens", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [2]},
+        {"t": "22:45", "n": "Gute-Nacht-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage", "i": [3]}
+      ]
+    },
+    {
+      "days": [5],
+      "entries": [
+        {"t": "10:00", "n": "Klangschalen", "s": "Alhambra Sauna", "c": "1. Etage", "i": [1]},
+        {"t": "10:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "11:00", "n": "Mokka Peeling-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage", "i": [1]},
+        {"t": "11:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "12:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse, mit Musik", "i": [3]},
+        {"t": "12:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "12:45", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "c": "EG", "i": [1]},
+        {"t": "13:00", "n": "Honig-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "14:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "15:00", "n": "Himalaya-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "16:00", "n": "Duftreise", "s": "Alhambra Sauna", "c": "1. Etage", "i": [3]},
+        {"t": "16:45", "n": "1001 Nacht", "s": "Kelo-Sauna", "c": "EG", "i": [1]},
+        {"t": "17:00", "n": "Duftzeremonie", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "17:45", "n": "Eisiger Wüstenwind", "s": "Alhambra Sauna", "c": "1. Etage", "i": [2]},
+        {"t": "18:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "19:00", "n": "Sibirischer Wind", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "20:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "21:00", "n": "Honig-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "22:00", "n": "Zauber des Südens", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "22:45", "n": "Orient Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "23:45", "n": "Gute-Nacht-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage", "i": [3]}
+      ]
+    },
+    {
+      "days": [6],
+      "entries": [
+        {"t": "10:00", "n": "Klangschalen", "s": "Alhambra Sauna", "c": "1. Etage", "i": [1]},
+        {"t": "10:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "11:00", "n": "Mokka Peeling-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage", "i": [1]},
+        {"t": "11:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "12:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse, mit Musik", "i": [3]},
+        {"t": "12:00", "n": "Aqua Fitness", "s": "Thermalbecken", "c": "EG", "r": 1},
+        {"t": "12:45", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "c": "EG", "i": [1]},
+        {"t": "13:00", "n": "Honig-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "14:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "15:00", "n": "Himalaya-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "16:00", "n": "Duftreise", "s": "Alhambra Sauna", "c": "1. Etage", "i": [3]},
+        {"t": "16:45", "n": "1001 Nacht", "s": "Kelo-Sauna", "c": "EG", "i": [1]},
+        {"t": "17:00", "n": "Duftzeremonie", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "17:45", "n": "Eisiger Wüstenwind", "s": "Alhambra Sauna", "c": "1. Etage", "i": [2]},
+        {"t": "18:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "19:00", "n": "Sibirischer Wind", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "20:00", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]},
+        {"t": "21:00", "n": "Honig-Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "22:00", "n": "Zauber des Südens", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [2]},
+        {"t": "22:45", "n": "Orient Aufguss", "s": "Alhambra Sauna", "c": "1. Etage, mit Musik", "i": [2]},
+        {"t": "23:45", "n": "Eukalyptus-Aufguss", "s": "Eukalyptus-Sauna", "c": "Dachterrasse", "i": [3]}
+      ]
+    }
+  ]
+}

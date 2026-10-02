@@ -1,0 +1,60 @@
+{
+  "id": "baederhaus-bad-kreuznach",
+  "name": "Bäderhaus Bad Kreuznach",
+  "city": "Bad Kreuznach",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.kreuznacherstadtwerke.de/wellness-vor-der-haustuer/baederhaus",
+  "schedules": [
+    {
+      "days": [3, 4, 5],
+      "entries": [
+        {"t": "13:00", "n": "Wiesenkräuter", "s": "Sauna EG", "i": [3]},
+        {"t": "14:00", "n": "Gebrannte Mandeln", "s": "Sauna OG", "i": [2]},
+        {"t": "14:30", "n": "Salzpeeling", "s": "Maurisches Bad", "r": 1},
+        {"t": "15:00", "n": "Schinderhannes", "s": "Sauna EG", "c": "Obst / Gemüseteller", "i": [4]},
+        {"t": "16:00", "n": "Eis-Melone", "s": "Sauna OG", "c": "Musikaufguss", "i": [2]},
+        {"t": "17:00", "n": "Löyly", "s": "Sauna EG", "i": [4]},
+        {"t": "18:00", "n": "Liebesapfel", "s": "Sauna OG", "i": [2]},
+        {"t": "18:30", "n": "Salzpeeling", "s": "Maurisches Bad", "r": 1},
+        {"t": "19:00", "n": "Polarminze", "s": "Sauna EG", "c": "Obst / Gemüseteller", "i": [3]},
+        {"t": "20:00", "n": "Zuckerwatte", "s": "Sauna OG", "c": "Musikaufguss", "i": [2]},
+        {"t": "21:00", "n": "Drachentöter", "s": "Sauna EG", "c": "Gute-Nacht-Aufguss", "i": [4]}
+      ]
+    },
+    {
+      "days": [6],
+      "entries": [
+        {"t": "11:00", "n": "Kaffee", "s": "Sauna EG", "c": "Einsteiger Aufguss", "i": [1]},
+        {"t": "12:00", "n": "Kräuter der Provence", "s": "Sauna OG", "i": [2]},
+        {"t": "13:00", "n": "Wiesenkräuter", "s": "Sauna EG", "i": [3]},
+        {"t": "14:00", "n": "Gebrannte Mandeln", "s": "Sauna OG", "i": [2]},
+        {"t": "14:30", "n": "Salzpeeling", "s": "Maurisches Bad", "r": 1},
+        {"t": "15:00", "n": "Schinderhannes", "s": "Sauna EG", "c": "Obst / Gemüseteller", "i": [4]},
+        {"t": "16:00", "n": "Eis-Melone", "s": "Sauna OG", "c": "Musikaufguss", "i": [2]},
+        {"t": "17:00", "n": "Löyly", "s": "Sauna EG", "i": [4]},
+        {"t": "18:00", "n": "Liebesapfel", "s": "Sauna OG", "i": [2]},
+        {"t": "18:30", "n": "Salzpeeling", "s": "Maurisches Bad", "r": 1},
+        {"t": "19:00", "n": "Polarminze", "s": "Sauna EG", "c": "Obst / Gemüseteller", "i": [3]},
+        {"t": "20:00", "n": "Zuckerwatte", "s": "Sauna OG", "c": "Musikaufguss", "i": [2]},
+        {"t": "21:00", "n": "Drachentöter", "s": "Sauna EG", "c": "Gute-Nacht-Aufguss", "i": [4]}
+      ]
+    },
+    {
+      "days": [7],
+      "entries": [
+        {"t": "11:00", "n": "Kaffee", "s": "Sauna EG", "c": "Einsteiger Aufguss", "i": [1]},
+        {"t": "12:00", "n": "Kräuter der Provence", "s": "Sauna OG", "i": [2]},
+        {"t": "13:00", "n": "Wiesenkräuter", "s": "Sauna EG", "i": [3]},
+        {"t": "14:00", "n": "Gebrannte Mandeln", "s": "Sauna OG", "i": [2]},
+        {"t": "14:30", "n": "Salzpeeling", "s": "Maurisches Bad", "r": 1},
+        {"t": "15:00", "n": "Schinderhannes", "s": "Sauna EG", "c": "Obst / Gemüseteller", "i": [4]},
+        {"t": "16:00", "n": "Eis-Melone", "s": "Sauna OG", "c": "Musikaufguss", "i": [2]},
+        {"t": "17:00", "n": "Löyly", "s": "Sauna EG", "i": [4]},
+        {"t": "18:00", "n": "Liebesapfel", "s": "Sauna OG", "i": [2]},
+        {"t": "18:30", "n": "Salzpeeling", "s": "Maurisches Bad", "r": 1},
+        {"t": "19:00", "n": "Polarminze", "s": "Sauna EG", "c": "Obst / Gemüseteller", "i": [3]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "soltau-therme",
+  "name": "Soltau Therme",
+  "city": "Soltau",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.soltau-therme-online.de/sauna/aufguesse/",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4],
+      "entries": [
+        {"t": "11:00", "n": "Frucht-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "12:00", "n": "Kräuter-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "13:00", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "i": [4]},
+        {"t": "14:30", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "15:30", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]},
+        {"t": "16:30", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "17:30", "n": "Frucht-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "18:30", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "c": "gerade Wochen", "i": [4]},
+        {"t": "18:30", "n": "Banja-Aufguss", "s": "Erd-Sauna", "c": "ungerade Wochen, kostenpflichtig", "i": [4]},
+        {"t": "20:00", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]}
+      ]
+    },
+    {
+      "days": [5],
+      "entries": [
+        {"t": "11:00", "n": "Frucht-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "12:00", "n": "Kräuter-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "13:00", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "i": [4]},
+        {"t": "14:30", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "15:30", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]},
+        {"t": "16:30", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "17:30", "n": "Frucht-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "18:30", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "c": "gerade Wochen", "i": [4]},
+        {"t": "18:30", "n": "Banja-Aufguss", "s": "Erd-Sauna", "c": "ungerade Wochen, kostenpflichtig", "i": [4]},
+        {"t": "20:00", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]},
+        {"t": "21:00", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]}
+      ]
+    },
+    {
+      "days": [6],
+      "entries": [
+        {"t": "11:00", "n": "Frucht-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "12:00", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "i": [4]},
+        {"t": "13:00", "n": "Kleine Banja", "s": "Erd-Sauna", "c": "kostenpflichtig", "i": [4]},
+        {"t": "13:30", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]},
+        {"t": "14:30", "n": "Kräuter", "s": "Kräuter-Sauna", "i": [3]},
+        {"t": "14:30", "n": "Kräuter", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "15:30", "n": "Klangschalen-Zeremonie", "s": "Birken-Eck", "r": 1},
+        {"t": "15:30", "n": "Frucht-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "16:30", "n": "Kräuter-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "16:30", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "17:30", "n": "Frucht-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "17:30", "n": "Kräuter-Aufguss", "s": "Kräuter-Sauna", "i": [3]},
+        {"t": "18:30", "n": "Banja-Aufguss", "s": "Erd-Sauna", "c": "kostenpflichtig", "i": [4]},
+        {"t": "18:30", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "i": [4]},
+        {"t": "20:00", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]},
+        {"t": "21:00", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]}
+      ]
+    },
+    {
+      "days": [7],
+      "entries": [
+        {"t": "11:00", "n": "Frucht-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "12:00", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "i": [4]},
+        {"t": "13:00", "n": "Kleine Banja", "s": "Erd-Sauna", "c": "kostenpflichtig", "i": [4]},
+        {"t": "13:30", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]},
+        {"t": "14:30", "n": "Kräuter", "s": "Kräuter-Sauna", "i": [3]},
+        {"t": "14:30", "n": "Kräuter", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "15:30", "n": "Klangschalen-Zeremonie", "s": "Birken-Eck", "r": 1},
+        {"t": "15:30", "n": "Frucht-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "16:30", "n": "Kräuter-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "16:30", "n": "Kräuter-Aufguss", "s": "Kelo-Sauna", "i": [2]},
+        {"t": "17:30", "n": "Frucht-Aufguss", "s": "Salzkristall-Sauna", "i": [2]},
+        {"t": "17:30", "n": "Kräuter-Aufguss", "s": "Kräuter-Sauna", "i": [3]},
+        {"t": "18:30", "n": "Banja-Aufguss", "s": "Erd-Sauna", "c": "kostenpflichtig", "i": [4]},
+        {"t": "18:30", "n": "Aufguss-Zeremonie", "s": "Kelo-Sauna", "i": [4]},
+        {"t": "20:00", "n": "Überraschungs-Aufguss", "s": "gemäß Aushang", "i": [1, 3]}
+      ]
+    }
+  ]
+}

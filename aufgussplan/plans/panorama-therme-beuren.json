@@ -1,0 +1,45 @@
+{
+  "id": "panorama-therme-beuren",
+  "name": "Panorama Therme Beuren",
+  "city": "Beuren",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.panorama-therme.de/baden-saunieren/saunalandschaft/aufguesse",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4, 5],
+      "entries": [
+        {"t": "12:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "13:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "14:00", "n": "Eis-Aufguss", "s": "Finnische Sauna"},
+        {"t": "14:30", "n": "Klangschalen-Zeremonie", "s": "Panorama Sauna"},
+        {"t": "15:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "16:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "17:00", "n": "Eis-Aufguss", "s": "Finnische Sauna"},
+        {"t": "17:30", "n": "Klangschalen-Zeremonie", "s": "Panorama Sauna"},
+        {"t": "18:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "19:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "20:00", "n": "Eis-Aufguss", "s": "Finnische Sauna"},
+        {"t": "21:00", "n": "Aufguss", "s": "Finnische Sauna"}
+      ]
+    },
+    {
+      "days": [6, 7],
+      "entries": [
+        {"t": "11:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "12:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "13:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "14:00", "n": "Eis-Aufguss", "s": "Finnische Sauna"},
+        {"t": "14:30", "n": "Klangschalen-Zeremonie", "s": "Panorama Sauna"},
+        {"t": "15:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "16:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "17:00", "n": "Eis-Aufguss", "s": "Finnische Sauna"},
+        {"t": "17:30", "n": "Klangschalen-Zeremonie", "s": "Panorama Sauna"},
+        {"t": "18:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "19:00", "n": "Aufguss", "s": "Finnische Sauna"},
+        {"t": "20:00", "n": "Eis-Aufguss", "s": "Finnische Sauna"},
+        {"t": "21:00", "n": "Aufguss", "s": "Finnische Sauna"}
+      ]
+    }
+  ]
+}

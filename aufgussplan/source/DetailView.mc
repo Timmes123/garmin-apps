@@ -37,7 +37,7 @@ class DetailView extends WatchUi.View {
             [Graphics.FONT_MEDIUM, Graphics.FONT_SMALL, Graphics.FONT_TINY, Graphics.FONT_XTINY]);
 
         dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
-        Draw.fitted(dc, cx, h * 0.51, (entry["s"] as String) + " · " + (entry["c"] as String), w * 0.92,
+        Draw.fitted(dc, cx, h * 0.51, (entry["c"] instanceof String) ? (entry["s"] as String) + " · " + (entry["c"] as String) : entry["s"] as String, w * 0.92,
             [Graphics.FONT_TINY, Graphics.FONT_XTINY]);
 
         var r = h / 45;

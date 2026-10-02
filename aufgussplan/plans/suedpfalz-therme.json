@@ -1,0 +1,60 @@
+{
+  "id": "suedpfalz-therme",
+  "name": "Südpfalz Therme",
+  "city": "Bad Bergzabern",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://suedpfalz-therme.de/sauna/",
+  "schedules": [
+    {
+      "days": [7, 1, 2, 3, 4],
+      "entries": [
+        {"t": "10:00", "n": "Muskatellersalbei", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "10:15", "n": "Peeling-Salz", "s": "Dampfbad", "r": 1},
+        {"t": "11:00", "n": "Latschenkiefer-Orange-Minze", "s": "Waldsauna", "c": "90°C, Eisaufguss", "i": [2]},
+        {"t": "12:00", "n": "Waldspaziergang", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "13:00", "n": "Bergamotteminze", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "14:00", "n": "Heublume", "s": "Waldsauna", "c": "90°C, mit Musik", "i": [2]},
+        {"t": "14:30", "n": "Herbstliche Kräuter", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "15:00", "n": "Niaouli", "s": "Waldsauna", "c": "90°C, Eisaufguss", "i": [3]},
+        {"t": "15:15", "n": "Peeling-Salz", "s": "Dampfbad", "r": 1},
+        {"t": "15:30", "n": "Räucherritual", "s": "Wiesensauna", "c": "70°C", "i": [1]},
+        {"t": "16:15", "n": "Holzig-urig", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "17:00", "n": "Herbstfrüchte", "s": "Waldsauna", "c": "90°C, mit Musik", "i": [2]},
+        {"t": "17:30", "n": "Zitrone-japanische Minze", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "18:30", "n": "Hemlocktanne", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "19:00", "n": "Vitalisierende Früchte", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "19:15", "n": "Peeling-Salz", "s": "Dampfbad", "r": 1},
+        {"t": "20:00", "n": "Holztrilogie", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "20:30", "n": "Heublume", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "21:00", "n": "Urige Überraschung", "s": "Waldsauna", "c": "100°C, >10 Min., Eisaufguss mit Musik", "i": [4]}
+      ]
+    },
+    {
+      "days": [5, 6],
+      "entries": [
+        {"t": "10:00", "n": "Muskatellersalbei", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "10:15", "n": "Peeling-Salz", "s": "Dampfbad", "r": 1},
+        {"t": "11:00", "n": "Latschenkiefer-Orange-Minze", "s": "Waldsauna", "c": "90°C, Eisaufguss", "i": [2]},
+        {"t": "12:00", "n": "Waldspaziergang", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "13:00", "n": "Bergamotteminze", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "14:00", "n": "Heublume", "s": "Waldsauna", "c": "90°C, mit Musik", "i": [2]},
+        {"t": "14:30", "n": "Herbstliche Kräuter", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "15:00", "n": "Niaouli", "s": "Waldsauna", "c": "90°C, Eisaufguss", "i": [3]},
+        {"t": "15:15", "n": "Peeling-Salz", "s": "Dampfbad", "r": 1},
+        {"t": "15:30", "n": "Räucherritual", "s": "Wiesensauna", "c": "70°C", "i": [1]},
+        {"t": "16:15", "n": "Holzig-urig", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "17:00", "n": "Herbstfrüchte", "s": "Waldsauna", "c": "90°C, mit Musik", "i": [2]},
+        {"t": "17:30", "n": "Zitrone-japanische Minze", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "18:30", "n": "Hemlocktanne", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "19:00", "n": "Vitalisierende Früchte", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "19:15", "n": "Peeling-Salz", "s": "Dampfbad", "r": 1},
+        {"t": "20:00", "n": "Holztrilogie", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "20:30", "n": "Heublume", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "21:00", "n": "Niaouli", "s": "Waldsauna", "c": "90°C", "i": [2]},
+        {"t": "21:30", "n": "Muskatellersalbei", "s": "Wiesensauna", "c": "85°C", "i": [1]},
+        {"t": "22:00", "n": "Urige Überraschung", "s": "Waldsauna", "c": "100°C, >10 Min., Eisaufguss mit Musik", "i": [4]}
+      ]
+    }
+  ]
+}

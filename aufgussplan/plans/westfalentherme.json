@@ -1,0 +1,49 @@
+{
+  "id": "westfalentherme",
+  "name": "Westfalen-Therme",
+  "city": "Bad Lippspringe",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.westfalen-therme.de/files/bilder/westfalen-therme/pdf/aufgussplan-wt.pdf",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4, 7],
+      "entries": [
+        {"t": "10:00", "n": "Guten Morgen", "s": "85°C Sauna"},
+        {"t": "11:00", "n": "Langschläfer Aufguss", "s": "Gartensauna"},
+        {"t": "12:00", "n": "Tea Time", "s": "75°C Sauna"},
+        {"t": "12:00", "n": "Honig zur Selbstanwendung", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "13:00", "n": "Frische WALDluft", "s": "Gartensauna"},
+        {"t": "14:00", "n": "Duftreise", "s": "85°C Sauna"},
+        {"t": "15:00", "n": "Heiße Birke", "s": "95°C Sauna"},
+        {"t": "16:00", "n": "Duftreise", "s": "Gartensauna"},
+        {"t": "17:00", "n": "Obstaufguss", "s": "85°C Sauna"},
+        {"t": "18:00", "n": "Heiß auf Eis", "s": "75°C Sauna"},
+        {"t": "18:00", "n": "Honig zur Selbstanwendung", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "19:00", "n": "Frische WALDluft", "s": "95°C Sauna"},
+        {"t": "20:00", "n": "Event Aufguss", "s": "Gartensauna"},
+        {"t": "21:00", "n": "Gute Nacht", "s": "95°C Sauna"}
+      ]
+    },
+    {
+      "days": [5, 6],
+      "entries": [
+        {"t": "10:00", "n": "Guten Morgen", "s": "85°C Sauna"},
+        {"t": "11:00", "n": "Langschläfer Aufguss", "s": "Gartensauna"},
+        {"t": "12:00", "n": "Tea Time", "s": "75°C Sauna"},
+        {"t": "12:00", "n": "Honig zur Selbstanwendung", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "13:00", "n": "Frische WALDluft", "s": "Gartensauna"},
+        {"t": "14:00", "n": "Duftreise", "s": "85°C Sauna"},
+        {"t": "15:00", "n": "Heiße Birke", "s": "95°C Sauna"},
+        {"t": "16:00", "n": "Duftreise", "s": "Gartensauna"},
+        {"t": "17:00", "n": "Obstaufguss", "s": "85°C Sauna"},
+        {"t": "18:00", "n": "Heiß auf Eis", "s": "75°C Sauna"},
+        {"t": "18:00", "n": "Honig zur Selbstanwendung", "s": "vor dem Dampfbad", "r": 1},
+        {"t": "19:00", "n": "Frische WALDluft", "s": "95°C Sauna"},
+        {"t": "20:00", "n": "Event Aufguss", "s": "Gartensauna"},
+        {"t": "21:00", "n": "Gute Nacht", "s": "95°C Sauna"},
+        {"t": "21:45", "n": "Traumaufguss", "s": "Gartensauna"}
+      ]
+    }
+  ]
+}

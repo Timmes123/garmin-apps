@@ -1,0 +1,57 @@
+{
+  "id": "limes-therme",
+  "name": "Limes-Therme (Römer-Sauna)",
+  "city": "Bad Gögging",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.limes-therme.de/roemer-sauna/aufgussplaene",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 5, 6, 7],
+      "entries": [
+        {"t": "11:00", "n": "Guten Morgen mit Musik", "s": "Arena", "c": "90°C", "i": [3]},
+        {"t": "11:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "12:00", "n": "Klangschale", "s": "Medusa", "c": "80°C", "i": [3]},
+        {"t": "12:45", "n": "Befeuchtung", "s": "Turm", "c": "80°C", "i": [1]},
+        {"t": "13:00", "n": "Carpe Diem", "s": "Arena", "c": "90°C", "i": [3]},
+        {"t": "13:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "14:00", "n": "Relax", "s": "Medusa", "c": "80°C", "i": [2]},
+        {"t": "14:30", "n": "Beduftung", "s": "Caldarium", "c": "55°C", "i": [1]},
+        {"t": "14:45", "n": "Befeuchtung", "s": "Turm", "c": "80°C", "i": [1]},
+        {"t": "15:00", "n": "Eis-Aufguss", "s": "Arena", "c": "90°C", "i": [4]},
+        {"t": "15:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "16:00", "n": "Klangschale", "s": "Medusa", "c": "80°C", "i": [3]},
+        {"t": "16:45", "n": "Befeuchtung", "s": "Turm", "c": "80°C", "i": [1]},
+        {"t": "17:00", "n": "Menthol Moments", "s": "Arena", "c": "90°C", "i": [4]},
+        {"t": "17:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "18:00", "n": "Relax", "s": "Medusa", "c": "80°C", "i": [2]},
+        {"t": "19:00", "n": "Duftreise mit Musik", "s": "Arena", "c": "90°C", "i": [3]}
+      ]
+    },
+    {
+      "days": [4],
+      "entries": [
+        {"t": "11:00", "n": "Guten Morgen mit Musik", "s": "Arena", "c": "90°C", "i": [3]},
+        {"t": "11:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "12:00", "n": "Klangschale", "s": "Medusa", "c": "80°C", "i": [3]},
+        {"t": "12:45", "n": "Befeuchtung", "s": "Turm", "c": "80°C", "i": [1]},
+        {"t": "13:00", "n": "Carpe Diem", "s": "Arena", "c": "90°C", "i": [3]},
+        {"t": "13:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "14:00", "n": "Relax", "s": "Medusa", "c": "80°C", "i": [2]},
+        {"t": "14:30", "n": "Beduftung", "s": "Caldarium", "c": "55°C", "i": [1]},
+        {"t": "14:45", "n": "Befeuchtung", "s": "Turm", "c": "80°C", "i": [1]},
+        {"t": "15:00", "n": "Eis-Aufguss", "s": "Arena", "c": "90°C", "i": [4]},
+        {"t": "15:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "16:00", "n": "Klangschale", "s": "Medusa", "c": "80°C", "i": [3]},
+        {"t": "16:45", "n": "Befeuchtung", "s": "Turm", "c": "80°C", "i": [1]},
+        {"t": "17:00", "n": "Menthol Moments", "s": "Arena", "c": "90°C", "i": [4]},
+        {"t": "17:45", "n": "Befeuchtung", "s": "Trajan", "c": "60°C", "i": [1]},
+        {"t": "18:00", "n": "Relax", "s": "Medusa", "c": "80°C", "i": [2]},
+        {"t": "19:00", "n": "Duftreise mit Musik", "s": "Arena", "c": "90°C", "i": [3]},
+        {"t": "19:30", "n": "Befeuchtung", "s": "Turm/Medusa/Trajan", "c": "80°/80°/60°C", "i": [1]},
+        {"t": "20:00", "n": "Party-Aufguss mit Musik", "s": "Arena", "c": "90°C", "i": [5]},
+        {"t": "21:00", "n": "Gießkannen-Gaudi mit Musik", "s": "Arena", "c": "90°C", "i": [5]}
+      ]
+    }
+  ]
+}

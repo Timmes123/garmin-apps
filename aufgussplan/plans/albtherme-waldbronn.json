@@ -1,0 +1,54 @@
+{
+  "id": "albtherme-waldbronn",
+  "name": "Albtherme Waldbronn",
+  "city": "Waldbronn",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.albtherme-waldbronn.de/de/sauna/sauna-aufgussplan",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4, 5, 6],
+      "entries": [
+        {"t": "11:00", "n": "Kräuter", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "11:40", "n": "Frucht", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "12:00", "n": "Frucht", "s": "Panorama", "c": "85°C", "i": [2]},
+        {"t": "13:00", "n": "Wald", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "13:40", "n": "Kräuter", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "14:00", "n": "Erfrischend", "s": "Panorama", "c": "85°C", "i": [2]},
+        {"t": "15:00", "n": "Kräuter", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "16:00", "n": "Wald", "s": "Panorama", "c": "85°C", "i": [2]},
+        {"t": "16:40", "n": "Wald", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "17:00", "n": "Erfrischend", "s": "Panorama", "c": "85°C, Reichung", "i": [2]},
+        {"t": "18:00", "n": "Frucht", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "18:40", "n": "Erfrischend", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "19:00", "n": "Erfrischend", "s": "Panorama", "c": "85°C, Reichung", "i": [2]},
+        {"t": "20:00", "n": "Kräuter", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "20:40", "n": "Kräuter", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "21:00", "n": "Freestyle", "s": "Panorama", "c": "85°C", "i": [1, 2]}
+      ]
+    },
+    {
+      "days": [7],
+      "entries": [
+        {"t": "10:00", "n": "Frucht", "s": "Panorama", "c": "85°C", "i": [2]},
+        {"t": "11:00", "n": "Kräuter", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "11:40", "n": "Frucht", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "12:00", "n": "Erfrischend", "s": "Panorama", "c": "85°C", "i": [2]},
+        {"t": "12:30", "n": "Kräuter", "s": "Hexenhäusle", "c": "85°C", "i": [2]},
+        {"t": "13:00", "n": "Wald", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "13:40", "n": "Kräuter", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "14:00", "n": "Wald", "s": "Panorama", "c": "85°C", "i": [2]},
+        {"t": "14:30", "n": "Frucht", "s": "Hexenhäusle", "c": "85°C", "i": [2]},
+        {"t": "15:00", "n": "Kräuter", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "15:40", "n": "Wald", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "16:00", "n": "Frucht", "s": "Panorama", "c": "85°C, Reichung", "i": [2]},
+        {"t": "16:30", "n": "Kräuter", "s": "Hexenhäusle", "c": "85°C", "i": [2]},
+        {"t": "17:00", "n": "Erfrischend", "s": "Garten", "c": "95°C", "i": [2]},
+        {"t": "17:40", "n": "Frucht", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [1]},
+        {"t": "18:00", "n": "Kräuter", "s": "Panorama", "c": "85°C, Reichung", "i": [2]},
+        {"t": "18:40", "n": "Kräuter", "s": "Bambus (Damenbereich)", "c": "80°C", "i": [2]},
+        {"t": "19:00", "n": "Freestyle", "s": "Garten", "c": "95°C", "i": [1, 2]}
+      ]
+    }
+  ]
+}

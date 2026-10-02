@@ -1,0 +1,112 @@
+{
+  "id": "ostsee-therme",
+  "name": "Ostsee Therme",
+  "city": "Scharbeutz",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://www.ostsee-therme.de/files/bilder/ostsee-therme/content/saunawelten/ostsee-therme-aufgussplan.pdf",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4],
+      "entries": [
+        {"t": "11:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "12:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "12:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "13:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "13:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "14:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "14:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "15:00", "n": "Experiences", "s": "80°-Sauna"},
+        {"t": "16:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "16:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "17:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "17:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "18:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "19:00", "n": "Experiences", "s": "80°-Sauna"},
+        {"t": "19:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "20:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "20:30", "n": "Tee Zeremonie", "s": "Panorama-Sauna"},
+        {"t": "21:00", "n": "Gute Nacht", "s": "Ostsee Arena"}
+      ]
+    },
+    {
+      "days": [5],
+      "entries": [
+        {"t": "11:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "11:30", "n": "Minzreise", "s": "Panorama-Sauna"},
+        {"t": "12:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "12:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "13:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "13:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "14:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "14:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "15:00", "n": "Experiences", "s": "80°-Sauna"},
+        {"t": "16:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "16:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "17:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "17:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "18:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "18:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "19:00", "n": "Experiences", "s": "80°-Sauna"},
+        {"t": "19:30", "n": "Minzreise", "s": "Panorama-Sauna"},
+        {"t": "20:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "20:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "21:00", "n": "Slivovitz", "s": "80°-Sauna"},
+        {"t": "21:30", "n": "Tee Zeremonie", "s": "Panorama-Sauna"},
+        {"t": "22:00", "n": "Gute Nacht", "s": "Ostsee Arena"}
+      ]
+    },
+    {
+      "days": [6],
+      "entries": [
+        {"t": "11:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "11:30", "n": "Minzreise", "s": "Panorama-Sauna"},
+        {"t": "12:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "12:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "13:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "13:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "14:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "14:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "15:00", "n": "Experiences", "s": "80°-Sauna & Ostsee Arena"},
+        {"t": "16:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "16:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "17:00", "n": "Aufguss", "s": "80°-Sauna & Ostsee Arena"},
+        {"t": "17:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "18:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "18:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "19:00", "n": "Experiences", "s": "80°-Sauna"},
+        {"t": "19:30", "n": "Minzreise", "s": "Panorama-Sauna"},
+        {"t": "20:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "20:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "21:00", "n": "Slivovitz", "s": "80°-Sauna"},
+        {"t": "21:30", "n": "Tee Zeremonie", "s": "Panorama-Sauna"},
+        {"t": "22:00", "n": "Gute Nacht", "s": "Ostsee Arena"}
+      ]
+    },
+    {
+      "days": [7],
+      "entries": [
+        {"t": "11:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "11:30", "n": "Minzreise", "s": "Panorama-Sauna"},
+        {"t": "12:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "12:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "13:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "13:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "14:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "14:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "15:00", "n": "Experiences", "s": "80°-Sauna & Ostsee Arena"},
+        {"t": "16:00", "n": "Aufguss", "s": "80°-Sauna"},
+        {"t": "16:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "17:00", "n": "Aufguss", "s": "80°-Sauna & Ostsee Arena"},
+        {"t": "17:30", "n": "Räucherritual", "s": "Panorama-Sauna"},
+        {"t": "18:00", "n": "Herbs & Trees", "s": "80°-Sauna"},
+        {"t": "18:30", "n": "Natursud", "s": "Klönschnack-Sauna"},
+        {"t": "19:00", "n": "Experiences", "s": "80°-Sauna"},
+        {"t": "19:30", "n": "Wenik-Aufguss", "s": "Klönschnack-Sauna"},
+        {"t": "20:00", "n": "Aufguss", "s": "Ostsee Arena"},
+        {"t": "20:30", "n": "Tee Zeremonie", "s": "Panorama-Sauna"},
+        {"t": "21:00", "n": "Gute Nacht", "s": "Ostsee Arena"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "wischlingen",
+  "name": "Solebad Wischlingen",
+  "city": "Dortmund",
+  "version": 1,
+  "updated": "2026-10-02",
+  "source": "https://wischlingen.de/sauna/aufgussplan/",
+  "schedules": [
+    {
+      "days": [1, 2, 3, 4, 5],
+      "entries": [
+        {"t": "10:00", "n": "Sanfter Sommermorgen", "s": "Amazonas", "i": [2]},
+        {"t": "11:00", "n": "Grubengold - Birkensud und Salzpeeling", "s": "Salzstollen", "i": [4]},
+        {"t": "12:00", "n": "Fenster zur Welt", "s": "Lappland", "i": [3]},
+        {"t": "13:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "13:30", "n": "Pflegeanwendung", "s": "Dampfbad", "i": [1], "r": 1},
+        {"t": "14:00", "n": "Sommerreise", "s": "Lappland", "i": [3]},
+        {"t": "15:00", "n": "Grubengold - Birkensud und Salzpeeling", "s": "Salzstollen", "i": [4]},
+        {"t": "16:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "17:00", "n": "Waldspaziergang", "s": "Lappland", "i": [3]},
+        {"t": "17:30", "n": "Pflegeanwendung", "s": "Dampfbad", "i": [1], "r": 1},
+        {"t": "18:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "19:30", "n": "Abendrot", "s": "Lappland", "i": [3]},
+        {"t": "21:00", "n": "Tiefenwärme mit Birkensud", "s": "Salzstollen", "i": [4]},
+        {"t": "21:15", "n": "Melisse", "s": "Amazonas", "i": [2]}
+      ]
+    },
+    {
+      "days": [6, 7],
+      "entries": [
+        {"t": "10:00", "n": "Sanfter Sommermorgen", "s": "Amazonas", "i": [2]},
+        {"t": "11:00", "n": "Grubengold - Birkensud und Salzpeeling", "s": "Salzstollen", "i": [4]},
+        {"t": "12:00", "n": "Fenster zur Welt", "s": "Lappland", "i": [3]},
+        {"t": "13:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "13:00", "n": "Naturseele", "s": "Himalaya", "i": [4]},
+        {"t": "13:30", "n": "Pflegeanwendung", "s": "Dampfbad", "i": [1], "r": 1},
+        {"t": "14:00", "n": "Sommerreise", "s": "Lappland", "i": [3]},
+        {"t": "15:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "15:00", "n": "Grubengold - Birkensud und Salzpeeling", "s": "Salzstollen", "i": [4]},
+        {"t": "15:30", "n": "Pflegeanwendung", "s": "Wellnesstopf", "i": [1], "r": 1},
+        {"t": "16:00", "n": "Waldspaziergang", "s": "Lappland", "i": [3]},
+        {"t": "17:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "17:00", "n": "Grubengold - Birkensud und Salzpeeling", "s": "Salzstollen", "i": [4]},
+        {"t": "18:00", "n": "Sommerreise", "s": "Lappland", "i": [3]},
+        {"t": "18:30", "n": "Pflegeanwendung", "s": "Dampfbad", "i": [1], "r": 1},
+        {"t": "19:00", "n": "Überraschung", "s": "Amazonas", "i": [2]},
+        {"t": "20:00", "n": "Abendrot", "s": "Lappland", "i": [3]},
+        {"t": "21:00", "n": "Tiefenwärme mit Birkensud", "s": "Salzstollen", "i": [4]},
+        {"t": "21:15", "n": "Minze", "s": "Amazonas", "i": [2]}
+      ]
+    }
+  ]
+}

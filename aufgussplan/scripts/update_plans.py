@@ -3,7 +3,7 @@
 
 Pro Sauna gibt es eine Funktion, die die Einträge von der Website liest. Geschrieben
 wird nur, wenn sich die Einträge geändert haben; dann steigt "version", damit die Uhr
-den neuen Plan übernimmt. Aufruf: python update_plans.py [sauna …] [--check]
+den neuen Plan übernimmt. Aufruf: python update_plans.py [sauna …] [--check] [--force]
 """
 import datetime
 import html
@@ -139,6 +139,7 @@ def dump(plan):
 
 def main():
     check_only = "--check" in sys.argv
+    force = "--force" in sys.argv
     try:
         from zoneinfo import ZoneInfo
         today = datetime.datetime.now(ZoneInfo("Europe/Berlin")).date()
@@ -151,6 +152,10 @@ def main():
         scrape = SCRAPERS[sauna]
         path = PLANS / f"{sauna}.json"
         plan = json.loads(path.read_text(encoding="utf-8"))
+        # Mehrere Uhren oder Saunawechsel: die Website wird höchstens einmal am Tag gelesen
+        if plan.get("checked") == today_number and not force:
+            print(f"{sauna}: heute schon geprüft")
+            continue
         try:
             entries = scrape()
         except Exception as error:  # eine kaputte Seite soll die anderen Saunen nicht blockieren
@@ -164,17 +169,19 @@ def main():
             print(f"{sauna}: FEHLER nur {len(entries)} Einträge gelesen")
             failed = True
             continue
-        if plan["schedules"][0]["entries"] == entries and plan.get("date", today_number) == today_number:
-            print(f"{sauna}: unverändert ({len(entries)} Einträge)")
+        changed = plan["schedules"][0]["entries"] != entries or plan.get("date", today_number) != today_number
+        print(f"{sauna}: {'geändert' if changed else 'unverändert'} ({len(entries)} Einträge)")
+        if check_only:
             continue
-        print(f"{sauna}: geändert ({len(entries)} Einträge)")
-        if not check_only:
+        if changed:
             plan["schedules"][0]["entries"] = entries
             plan["version"] += 1
             plan["updated"] = today
             if plan.get("live"):
                 plan["date"] = today_number
-            path.write_text(dump(plan), encoding="utf-8", newline="\n")
+        # "checked" sagt den Uhren, dass die Website heute schon gelesen wurde
+        plan["checked"] = today_number
+        path.write_text(dump(plan), encoding="utf-8", newline="\n")
     sys.exit(1 if failed else 0)
 
 

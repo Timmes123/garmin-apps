@@ -24,8 +24,8 @@ Eine JSON-Datei pro Sauna. Die Uhr lädt die Datei über
 
 Es werden nur Saunen aufgenommen, deren Plan sich per Skript von der Website lesen lässt.
 `scripts/update_plans.py` hat pro Sauna eine Funktion dafür. Es gibt keinen Zeitplan:
-Die Uhr startet beim Öffnen der App (höchstens einmal am Tag je Sauna, oder über
-„Plan aktualisieren“) die GitHub Action `.github/workflows/update-plans.yml` für ihre Sauna
+Die Plan-Datei nennt in `checked` den Tag, an dem die Website zuletzt gelesen wurde. Steht dort
+nicht heute, startet die Uhr beim Öffnen der App (oder über „Plan aktualisieren“) die GitHub Action `.github/workflows/update-plans.yml` für ihre Sauna
 und lädt danach die neue Datei. Dafür braucht die App einen GitHub-Token, den `build.sh`
 aus `.keys/github_token.txt` einbaut (Fine-grained, nur dieses Repo, „Actions: Read and write“).
 

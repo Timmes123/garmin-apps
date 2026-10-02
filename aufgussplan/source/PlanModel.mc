@@ -24,7 +24,6 @@ class PlanModel {
     const KEY_INDEX = "index";
     const KEY_MARKS = "marks";
     const KEY_LEAD = "lead";
-    const KEY_CHECKED = "checked";
 
     var plan as Dictionary?;
     var entries as Array = [];
@@ -314,13 +313,10 @@ class PlanModel {
         return stored != null && stored["live"] == 1 && PlanStore.isOutdated(stored);
     }
 
-    // Tagespläne von gestern immer, sonst einmal am Tag je Sauna oder über „Plan aktualisieren“
-    private function needsCheck() as Boolean {
-        if (isStale() || _force) {
-            return true;
-        }
-        var checked = Application.Storage.getValue(KEY_CHECKED);
-        return !(checked instanceof Dictionary && checked[saunaId()] == PlanStore.todayNumber());
+    // Die Plan-Datei nennt in "checked" den Tag, an dem GitHub die Website zuletzt gelesen hat.
+    // Steht dort heute, muss keine Uhr mehr etwas anstoßen (außer über „Plan aktualisieren“).
+    private function checkedToday(data as Dictionary) as Boolean {
+        return data["checked"] == PlanStore.todayNumber();
     }
 
     private function startCheck() as Void {
@@ -349,7 +345,7 @@ class PlanModel {
         var token = WatchUi.loadResource(Rez.Strings.GithubToken) as String;
         Communications.makeWebRequest(
             API_URL + "actions/workflows/update-plans.yml/dispatches",
-            { "ref" => "main", "inputs" => { "sauna" => saunaId() } },
+            { "ref" => "main", "inputs" => { "sauna" => saunaId(), "force" => _force ? "1" : "" } },
             {
                 :method => Communications.HTTP_REQUEST_METHOD_POST,
                 :headers => {
@@ -370,13 +366,6 @@ class PlanModel {
             finishCheck((loading || _manual) ? "Fehler " + code : null);
             return;
         }
-        // je Sauna merken, damit ein Wechsel hin und zurück nicht erneut prüft
-        var checked = Application.Storage.getValue(KEY_CHECKED);
-        if (!(checked instanceof Dictionary)) {
-            checked = {};
-        }
-        checked[saunaId()] = PlanStore.todayNumber();
-        Application.Storage.setValue(KEY_CHECKED, checked as Dictionary<Application.PropertyKeyType, Application.PropertyValueType>);
         _pollIn = POLL_TICKS;
     }
 
@@ -429,9 +418,9 @@ class PlanModel {
         }
         if (_checking) {
             // Warten auf das Ergebnis der Action: Tagesplan von heute bzw. eine neue Version
-            var done = valid && (loading ? !isStale() : updated);
+            var done = valid && (loading ? !isStale() : (updated || (!_force && checkedToday(data as Dictionary))));
             if (done) {
-                finishCheck("Aktualisiert");
+                finishCheck(updated ? "Aktualisiert" : (_manual ? "Aktuell" : null));
             } else if (_polls < (loading ? MAX_POLLS : QUIET_POLLS)) {
                 if (loading && _polls % RETRY_POLLS == 0) {
                     // Der Lauf ist vermutlich gescheitert (Website von GitHub aus nicht erreichbar): neu anstoßen
@@ -445,7 +434,7 @@ class PlanModel {
                 finishCheck(_manual ? "Aktuell" : null);
             }
         } else if (valid) {
-            if (needsCheck()) {
+            if (isStale() || _force || !checkedToday(data as Dictionary)) {
                 startCheck();
             } else if (updated) {
                 setStatus("Aktualisiert");

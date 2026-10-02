@@ -8,6 +8,10 @@ on:
         description: "Nur diese Sauna lesen (leer = Obermain Therme)"
         required: false
         default: ""
+      force:
+        description: "1 = Website lesen, auch wenn heute schon geprüft"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -24,9 +28,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Pläne von den Websites lesen
-        run: python aufgussplan/scripts/update_plans.py "$SAUNA"
+        run: python aufgussplan/scripts/update_plans.py "$SAUNA" ${FORCE:+--force}
         env:
           SAUNA: ${{ inputs.sauna }}
+          FORCE: ${{ inputs.force }}
       - name: Änderungen committen
         run: |
           if [ -n "$(git status --porcelain aufgussplan/plans)" ]; then

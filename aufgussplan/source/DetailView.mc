@@ -41,7 +41,8 @@ class DetailView extends WatchUi.View {
             [Graphics.FONT_TINY, Graphics.FONT_XTINY]);
 
         var r = h / 45;
-        Draw.drops(dc, cx - Draw.dropsWidth(entry["i"], r) / 2, (h * 0.615).toNumber(), entry["i"], r, false);
+        var scale = _model.scale();
+        Draw.drops(dc, cx - Draw.dropsWidth(entry["i"], scale, r) / 2, (h * 0.615).toNumber(), entry["i"], scale, r, false);
 
         var info;
         if (skipped) {
@@ -58,8 +59,10 @@ class DetailView extends WatchUi.View {
             dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
             Draw.fitted(dc, cx, h * 0.84, "Erinnerung " + _model.lead() + " min", w * 0.66, [Graphics.FONT_XTINY]);
         } else {
+            // Merkmale wie "Musik" haben Vorrang vor dem Bedienhinweis
+            var tags = entry["g"];
             dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            Draw.fitted(dc, cx, h * 0.84, "START: erinnern", w * 0.66, [Graphics.FONT_XTINY]);
+            Draw.fitted(dc, cx, h * 0.84, (tags instanceof String) ? tags : "START: erinnern", w * 0.66, [Graphics.FONT_XTINY]);
         }
     }
 }

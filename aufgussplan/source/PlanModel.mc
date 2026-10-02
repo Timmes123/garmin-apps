@@ -11,6 +11,10 @@ import Toybox.WatchUi;
 class PlanModel {
 
     const BASE_URL = "https://raw.githubusercontent.com/Timmes123/garmin-apps/main/aufgussplan/plans/";
+    // Die API liefert neue Commits sofort, raw.githubusercontent.com erst nach einigen Minuten
+    const API_URL = "https://api.github.com/repos/Timmes123/garmin-apps/";
+    const POLL_TICKS = 2;
+    const MAX_POLLS = 12;
     const DEFAULT_SAUNA = "obermaintherme";
     const LEAD_CHOICES = [5, 10, 15, 20];
 
@@ -24,7 +28,11 @@ class PlanModel {
     var lateDay as Boolean = true;
     var sel as Number = 0;
     var status as String?;
+    // true, solange GitHub den heutigen Tagesplan erst noch von der Website holt
+    var loading as Boolean = false;
 
+    private var _polls as Number = 0;
+    private var _pollIn as Number = 0;
     private var _statusTicks as Number = 0;
     private var _manual as Boolean = false;
     private var _previousSauna as String?;
@@ -102,6 +110,12 @@ class PlanModel {
                 status = null;
             }
             _statusTicks--;
+        }
+        if (_pollIn > 0) {
+            _pollIn--;
+            if (_pollIn == 0) {
+                pollLivePlan();
+            }
         }
         var fired = Application.Storage.getValue(Reminders.KEY_FIRED);
         if (fired instanceof Array) {
@@ -213,6 +227,14 @@ class PlanModel {
         return DEFAULT_SAUNA;
     }
 
+    // Höchste Stufe der Intensitätsskala, 0 wenn die Sauna keine angibt
+    function scale() as Number {
+        if (plan != null && (plan as Dictionary)["scale"] instanceof Number) {
+            return (plan as Dictionary)["scale"] as Number;
+        }
+        return 0;
+    }
+
     function saunaName() as String {
         if (plan != null && (plan as Dictionary)["name"] instanceof String) {
             return (plan as Dictionary)["name"] as String;
@@ -256,6 +278,9 @@ class PlanModel {
             return;
         }
         _manual = manual;
+        _polls = 0;
+        _pollIn = 0;
+        loading = false;
         if (manual) {
             setStatus("Lade ...");
         }
@@ -274,22 +299,105 @@ class PlanModel {
         );
     }
 
+    // ---- Tagespläne: GitHub liest sie erst auf Anforderung von der Website ----
+
+    private function needsLiveUpdate() as Boolean {
+        var stored = PlanStore.getPlan();
+        return stored != null && stored["live"] == 1 && PlanStore.isOutdated(stored);
+    }
+
+    private function startLiveUpdate() as Void {
+        var token = WatchUi.loadResource(Rez.Strings.GithubToken) as String;
+        if (token.length() == 0) {
+            setStatus("Kein Token");
+            return;
+        }
+        loading = true;
+        setStatus("Hole Plan");
+        Communications.makeWebRequest(
+            API_URL + "actions/workflows/update-plans.yml/dispatches",
+            { "ref" => "main", "inputs" => { "sauna" => saunaId() } },
+            {
+                :method => Communications.HTTP_REQUEST_METHOD_POST,
+                :headers => {
+                    "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
+                    "Authorization" => "Bearer " + token,
+                    "Accept" => "application/vnd.github+json",
+                    "User-Agent" => "aufgussplan-watch"
+                },
+                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+            },
+            method(:onDispatch)
+        );
+    }
+
+    // GitHub antwortet bei Erfolg mit leerem 204; nur klare Ablehnungen sind Fehler
+    function onDispatch(code as Number, data as Dictionary or String or Null) as Void {
+        if (code == 401 || code == 403 || code == 404 || code == 422) {
+            loading = false;
+            setStatus("Fehler " + code);
+            return;
+        }
+        _polls = 0;
+        _pollIn = POLL_TICKS;
+    }
+
+    private function pollLivePlan() as Void {
+        _polls++;
+        Communications.makeWebRequest(
+            API_URL + "contents/aufgussplan/plans/" + saunaId() + ".json",
+            { "t" => Time.now().value() },
+            {
+                :method => Communications.HTTP_REQUEST_METHOD_GET,
+                :headers => {
+                    "Accept" => "application/vnd.github.raw+json",
+                    "User-Agent" => "aufgussplan-watch"
+                },
+                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+            },
+            method(:onPlan)
+        );
+    }
+
     function onPlan(code as Number, data as Dictionary or String or Null) as Void {
         var previous = _previousSauna;
         _previousSauna = null;
         if (code == 200 && data instanceof Dictionary && data["schedules"] instanceof Array) {
             var stored = PlanStore.getPlan();
             var switched = stored == null || !saunaId().equals(stored["id"]);
-            if (switched || PlanStore.versionOf(data) > PlanStore.versionOf(stored as Dictionary)) {
+            var updated = switched || PlanStore.versionOf(data) > PlanStore.versionOf(stored as Dictionary);
+            if (updated) {
                 PlanStore.setPlan(data);
                 if (switched) {
                     Application.Storage.deleteValue(KEY_MARKS);
                     rebuildPending();
                 }
                 reload();
-                setStatus("Aktualisiert");
-            } else if (_manual) {
-                setStatus("Aktuell");
+            }
+            if (needsLiveUpdate()) {
+                if (!loading) {
+                    startLiveUpdate();
+                } else if (_polls < MAX_POLLS) {
+                    _pollIn = POLL_TICKS;
+                } else {
+                    loading = false;
+                    setStatus("Kein Tagesplan");
+                }
+            } else {
+                loading = false;
+                if (updated) {
+                    setStatus("Aktualisiert");
+                } else if (_manual) {
+                    setStatus("Aktuell");
+                }
+            }
+        } else if (loading) {
+            // Abfrage während des Wartens fehlgeschlagen: weiter versuchen
+            if (_polls < MAX_POLLS) {
+                _pollIn = POLL_TICKS;
+            } else {
+                loading = false;
+                setStatus("Fehler " + code);
             }
         } else {
             if (previous != null) {

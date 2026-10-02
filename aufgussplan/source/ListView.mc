@@ -32,7 +32,7 @@ class ListView extends WatchUi.View {
         var entries = _model.entries;
         if (entries.size() == 0) {
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            Draw.fitted(dc, cx, h * 0.5, _model.plan == null ? "Kein Plan geladen" : "Heute keine Aufgüsse", w * 0.9,
+            Draw.fitted(dc, cx, h * 0.5, _model.loading ? "Hole Tagesplan ..." : (_model.plan == null ? "Kein Plan geladen" : "Heute keine Aufgüsse"), w * 0.9,
                 [Graphics.FONT_SMALL, Graphics.FONT_TINY]);
             return;
         }
@@ -67,7 +67,8 @@ class ListView extends WatchUi.View {
         var gap = r * 2;
         var time = entry["t"] as String;
         var timeWidth = dc.getTextWidthInPixels(time, Graphics.FONT_MEDIUM);
-        var dropsWidth = Draw.dropsWidth(entry["i"], r);
+        var scale = _model.scale();
+        var dropsWidth = Draw.dropsWidth(entry["i"], scale, r);
         var markWidth = _model.isMarked(entry) ? r * 4 : 0;
         var total = markWidth + timeWidth + (dropsWidth > 0 ? gap + dropsWidth : 0);
         var x = cx - total / 2;
@@ -79,7 +80,7 @@ class ListView extends WatchUi.View {
         }
         dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, y, Graphics.FONT_MEDIUM, time, Draw.LEFT);
-        Draw.drops(dc, x + timeWidth + gap, y, entry["i"], r, false);
+        Draw.drops(dc, x + timeWidth + gap, y, entry["i"], scale, r, false);
 
         // Zeile 2: Name
         dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
@@ -106,7 +107,8 @@ class ListView extends WatchUi.View {
         var dim = _model.isSkipped(entry) || PlanStore.entryMinutes(entry) < now - 14;
         var r = dc.getHeight() / 90;
         var gap = r * 2;
-        var dropsWidth = Draw.dropsWidth(entry["i"], r);
+        var scale = _model.scale();
+        var dropsWidth = Draw.dropsWidth(entry["i"], scale, r);
         if (dropsWidth > 0) {
             dropsWidth += gap;
         }
@@ -121,7 +123,7 @@ class ListView extends WatchUi.View {
         }
         dc.setColor(dim ? Graphics.COLOR_DK_GRAY : Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, y, font, text, Draw.LEFT);
-        Draw.drops(dc, x + textWidth + gap, y, entry["i"], r, dim);
+        Draw.drops(dc, x + textWidth + gap, y, entry["i"], scale, r, dim);
     }
 }
 

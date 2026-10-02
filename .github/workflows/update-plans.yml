@@ -4,9 +4,17 @@ on:
   schedule:
     - cron: "0 5 * * 1"   # montags 05:00 UTC
   workflow_dispatch:
+    inputs:
+      sauna:
+        description: "Nur diese Sauna lesen (leer = alle Wochenpläne)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
+
+# Zwei Uhren gleichzeitig sollen nicht gegeneinander pushen
+concurrency: update-plans
 
 jobs:
   update:
@@ -17,7 +25,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Pläne von den Websites lesen
-        run: python aufgussplan/scripts/update_plans.py
+        run: python aufgussplan/scripts/update_plans.py "$SAUNA"
+        env:
+          SAUNA: ${{ inputs.sauna }}
       - name: Änderungen committen
         run: |
           if [ -n "$(git status --porcelain aufgussplan/plans)" ]; then

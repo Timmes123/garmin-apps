@@ -30,6 +30,12 @@ module PlanStore {
         return 0;
     }
 
+    // Tagespläne tragen ein Datum und gelten nur an diesem Tag
+    function isOutdated(plan as Dictionary) as Boolean {
+        var date = plan["date"];
+        return date instanceof Number && date != todayNumber();
+    }
+
     function hideRituals() as Boolean {
         return Application.Storage.getValue(KEY_HIDE_RITUALS) == true;
     }
@@ -57,7 +63,7 @@ module PlanStore {
             return result;
         }
         var schedules = plan["schedules"];
-        if (!(schedules instanceof Array)) {
+        if (!(schedules instanceof Array) || isOutdated(plan)) {
             return result;
         }
         var today = isoWeekday();

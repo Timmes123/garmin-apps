@@ -1,5 +1,6 @@
 {
   "saunas": [
+    {"id": "fuerthermare", "name": "Fürthermare", "city": "Fürth"},
     {"id": "obermaintherme", "name": "Obermain Therme", "city": "Bad Staffelstein"}
   ]
 }

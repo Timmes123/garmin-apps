@@ -45,21 +45,31 @@ module Draw {
         return 0;
     }
 
-    function dropsWidth(intensity as Object?, r as Number) as Number {
-        var count = maxDrops(intensity);
+    // Anzahl gezeichneter Tropfen: mit Skala (z. B. 5) werden auch die leeren Stufen gezeigt
+    function dropCount(intensity as Object?, scale as Number) as Number {
+        var max = maxDrops(intensity);
+        return (max > 0 && scale > max) ? scale : max;
+    }
+
+    function dropsWidth(intensity as Object?, scale as Number, r as Number) as Number {
+        var count = dropCount(intensity, scale);
         return count > 0 ? count * r * 3 - r : 0;
     }
 
-    // Intensität als Tropfen ab der linken Kante x: sichere Tropfen kräftig, die "bis zu"-Tropfen dunkel
-    function drops(dc as Graphics.Dc, x as Number, y as Number, intensity as Object?, r as Number, dim as Boolean) as Void {
+    // Intensität als Tropfen ab der linken Kante x: sichere Tropfen kräftig, die "bis zu"-Tropfen dunkelrot,
+    // nicht erreichte Stufen der Skala grau
+    function drops(dc as Graphics.Dc, x as Number, y as Number, intensity as Object?, scale as Number, r as Number, dim as Boolean) as Void {
         var max = maxDrops(intensity);
         if (max == 0) {
             return;
         }
         var min = (intensity as Array)[0] as Number;
+        var count = dropCount(intensity, scale);
         var cx = x + r;
-        for (var i = 0; i < max; i++) {
-            if (dim) {
+        for (var i = 0; i < count; i++) {
+            if (i >= max) {
+                dc.setColor(dim ? 0x202020 : Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+            } else if (dim) {
                 dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
             } else {
                 dc.setColor(i < min ? Graphics.COLOR_RED : Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);

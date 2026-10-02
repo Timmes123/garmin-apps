@@ -10,6 +10,7 @@ import html
 import json
 import re
 import sys
+import time
 import urllib.request
 from pathlib import Path
 
@@ -18,9 +19,16 @@ USER_AGENT = "garmin-apps-aufgussplan (+https://github.com/Timmes123/garmin-apps
 
 
 def fetch(url):
+    """Lädt eine Seite; einzelne Zeitüberschreitungen werden durch neue Versuche abgefangen."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read().decode("utf-8", errors="replace")
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(request, timeout=10) as response:
+                return response.read().decode("utf-8", errors="replace")
+        except OSError as error:
+            last_error = error
+            time.sleep(2)
+    raise last_error
 
 
 def text(fragment):

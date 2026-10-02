@@ -2,11 +2,11 @@
   "id": "fuerthermare",
   "name": "Fürthermare",
   "city": "Fürth",
-  "version": 4,
+  "version": 5,
   "updated": "2026-10-02",
   "source": "https://www.fuerthermare.de/sauna/aufgussplan",
   "live": 1,
-  "date": 20261002,
+  "date": 20261001,
   "scale": 5,
   "schedules": [
     {

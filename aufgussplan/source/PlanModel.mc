@@ -16,6 +16,7 @@ class PlanModel {
     const POLL_TICKS = 2;
     const MAX_POLLS = 12;
     const QUIET_POLLS = 4;
+    const RETRY_POLLS = 4;
     const DEFAULT_SAUNA = "obermaintherme";
     const LEAD_CHOICES = [5, 10, 15, 20];
 
@@ -337,6 +338,12 @@ class PlanModel {
         } else if (_manual) {
             setStatus("Prüfe ...");
         }
+        _polls = 0;
+        dispatch();
+    }
+
+    private function dispatch() as Void {
+        var token = WatchUi.loadResource(Rez.Strings.GithubToken) as String;
         Communications.makeWebRequest(
             API_URL + "actions/workflows/update-plans.yml/dispatches",
             { "ref" => "main", "inputs" => { "sauna" => saunaId() } },
@@ -361,7 +368,6 @@ class PlanModel {
             return;
         }
         Application.Storage.setValue(KEY_CHECKED, [saunaId(), PlanStore.todayNumber()]);
-        _polls = 0;
         _pollIn = POLL_TICKS;
     }
 
@@ -418,7 +424,12 @@ class PlanModel {
             if (done) {
                 finishCheck("Aktualisiert");
             } else if (_polls < (loading ? MAX_POLLS : QUIET_POLLS)) {
-                _pollIn = POLL_TICKS;
+                if (loading && _polls % RETRY_POLLS == 0) {
+                    // Der Lauf ist vermutlich gescheitert (Website von GitHub aus nicht erreichbar): neu anstoßen
+                    dispatch();
+                } else {
+                    _pollIn = POLL_TICKS;
+                }
             } else if (loading) {
                 finishCheck("Kein Tagesplan");
             } else {

@@ -248,7 +248,7 @@ class PlanModel {
 
     function planInfo() as String {
         if (plan != null && (plan as Dictionary)["updated"] instanceof String) {
-            return "Stand " + ((plan as Dictionary)["updated"] as String);
+            return "Stand " + ((plan as Dictionary)["updated"] as String) + " · v" + PlanStore.versionOf(plan as Dictionary);
         }
         return "kein Plan geladen";
     }

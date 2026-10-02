@@ -8,6 +8,7 @@ import Toybox.Time.Gregorian;
 module PlanStore {
 
     const KEY_PLAN = "plan";
+    const KEY_HIDE_RITUALS = "hideRituals";
 
     function getPlan() as Dictionary? {
         var plan = Application.Storage.getValue(KEY_PLAN);
@@ -29,10 +30,20 @@ module PlanStore {
         return 0;
     }
 
+    function hideRituals() as Boolean {
+        return Application.Storage.getValue(KEY_HIDE_RITUALS) == true;
+    }
+
     // Wochentag nach ISO: 1 = Montag … 7 = Sonntag
     function isoWeekday() as Number {
         var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         return (((info.day_of_week as Number) + 5) % 7) + 1;
+    }
+
+    // Heutiges Datum als Zahl JJJJMMTT
+    function todayNumber() as Number {
+        var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        return (info.year as Number) * 10000 + (info.month as Number) * 100 + (info.day as Number);
     }
 
     function nowMinutes() as Number {
@@ -40,7 +51,7 @@ module PlanStore {
         return clock.hour * 60 + clock.min;
     }
 
-    function todaysEntries(plan as Dictionary?) as Array {
+    function todaysEntries(plan as Dictionary?, hideRituals as Boolean) as Array {
         var result = [];
         if (plan == null) {
             return result;
@@ -54,8 +65,14 @@ module PlanStore {
             var schedule = schedules[i] as Dictionary;
             var days = schedule["days"];
             var entries = schedule["entries"];
-            if (days instanceof Array && entries instanceof Array && days.indexOf(today) >= 0) {
-                result.addAll(entries);
+            if (!(days instanceof Array) || !(entries instanceof Array) || days.indexOf(today) < 0) {
+                continue;
+            }
+            for (var j = 0; j < entries.size(); j++) {
+                var entry = entries[j] as Dictionary;
+                if (!hideRituals || entry["r"] != 1) {
+                    result.add(entry);
+                }
             }
         }
         return result;
@@ -75,8 +92,7 @@ module PlanStore {
         }
         var ranges = plan["lateRanges"];
         if (ranges instanceof Array) {
-            var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-            var today = (info.year as Number) * 10000 + (info.month as Number) * 100 + (info.day as Number);
+            var today = todayNumber();
             for (var i = 0; i < ranges.size(); i++) {
                 var range = ranges[i] as Array;
                 if (today >= (range[0] as Number) && today <= (range[1] as Number)) {
@@ -92,21 +108,25 @@ module PlanStore {
     }
 
     // "14:10" -> 850
-    function entryMinutes(entry as Dictionary) as Number {
-        var t = entry["t"];
-        if (!(t instanceof String)) {
-            return 0;
-        }
+    function parseMinutes(t as String) as Number {
         var idx = t.find(":");
         if (idx == null) {
             return 0;
         }
-        var h = t.substring(0, idx).toNumber();
-        var m = t.substring(idx + 1, t.length()).toNumber();
+        var h = (t.substring(0, idx) as String).toNumber();
+        var m = (t.substring(idx + 1, idx + 3) as String).toNumber();
         if (h == null || m == null) {
             return 0;
         }
         return h * 60 + m;
+    }
+
+    function entryMinutes(entry as Dictionary) as Number {
+        var t = entry["t"];
+        if (t instanceof String) {
+            return parseMinutes(t);
+        }
+        return 0;
     }
 
     // Index des nächsten Aufgusses, der heute noch stattfindet, sonst -1

@@ -16,12 +16,19 @@ class SaunaGlanceView extends WatchUi.GlanceView {
 
         var plan = PlanStore.getPlan();
         if (plan != null) {
-            var entries = PlanStore.todaysEntries(plan);
+            var entries = PlanStore.todaysEntries(plan, PlanStore.hideRituals());
             var next = PlanStore.nextIndex(entries, PlanStore.isLateDay(plan));
             if (next >= 0) {
                 var entry = entries[next] as Dictionary;
                 var diff = PlanStore.entryMinutes(entry) - PlanStore.nowMinutes();
-                top = (entry["t"] as String) + " · " + PlanStore.countdownText(diff);
+                // kurz halten: das Glance zeigt nur etwa 14 Zeichen
+                var left = "jetzt";
+                if (diff >= 60) {
+                    left = (diff / 60) + ":" + (diff % 60).format("%02d") + " h";
+                } else if (diff > 0) {
+                    left = diff + " min";
+                }
+                top = (entry["t"] as String) + " · " + left;
                 bottom = entry["n"] as String;
             } else {
                 bottom = "Heute keine Aufgüsse mehr";
@@ -29,7 +36,7 @@ class SaunaGlanceView extends WatchUi.GlanceView {
         }
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(0, h * 0.28, Graphics.FONT_TINY, top, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(0, h * 0.28, Graphics.FONT_XTINY, top, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(0, h * 0.72, Graphics.FONT_XTINY, bottom, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }

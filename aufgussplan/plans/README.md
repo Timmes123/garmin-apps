@@ -17,4 +17,12 @@ Eine JSON-Datei pro Sauna. Die Uhr lädt die Datei über
 | `entries[].s` | Sauna bzw. Ort |
 | `entries[].c` | Temperatur oder Zusatz |
 | `entries[].i` | Intensität in Tropfen: `[3]` oder als Spanne `[2, 3]`; weglassen, wenn keine angegeben |
+| `entries[].r` | `1` = Maske/Ritual statt Aufguss (in der App ausblendbar) |
 | `entries[].l` | `1` = findet nur bei langer Öffnung statt |
+
+## Neue Sauna hinzufügen
+
+1. `<id>.json` nach dem Format oben anlegen (`id` in der Datei = Dateiname).
+2. Die Sauna in `index.json` eintragen (`id`, `name`, `city`).
+
+Die App lädt `index.json` bei jedem Start und zeigt die Saunen im Menü unter „Sauna“.

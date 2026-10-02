@@ -1,7 +1,7 @@
 # Aufgusspläne
 
 Eine JSON-Datei pro Sauna. Die Uhr lädt die Datei über
-`https://raw.githubusercontent.com/Timmes123/garmin-apps/main/plans/<id>.json`.
+`https://raw.githubusercontent.com/Timmes123/garmin-apps/main/aufgussplan/plans/<id>.json`.
 
 ## Format
 

@@ -7,7 +7,7 @@ import Toybox.WatchUi;
 
 class SaunaView extends WatchUi.View {
 
-    const PLAN_URL = "https://raw.githubusercontent.com/Timmes123/garmin-apps/main/plans/obermaintherme.json";
+    const PLAN_URL = "https://raw.githubusercontent.com/Timmes123/garmin-apps/main/aufgussplan/plans/obermaintherme.json";
 
     private var _plan as Dictionary?;
     private var _entries as Array = [];

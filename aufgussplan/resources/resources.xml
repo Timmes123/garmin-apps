@@ -5,5 +5,5 @@
     <drawables>
         <bitmap id="LauncherIcon" filename="launcher_icon.png"/>
     </drawables>
-    <jsonData id="DefaultPlan" filename="../../plans/obermaintherme.json"/>
+    <jsonData id="DefaultPlan" filename="../plans/obermaintherme.json"/>
 </resources>

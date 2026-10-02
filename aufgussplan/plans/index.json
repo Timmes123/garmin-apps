@@ -1,36 +1,5 @@
 {
   "saunas": [
-    {"id": "albtherme-waldbronn", "name": "Albtherme Waldbronn", "city": "Waldbronn"},
-    {"id": "aqualaatzium", "name": "aquaLaatzium", "city": "Laatzen"},
-    {"id": "bahia", "name": "Bahia Sauna- & Wasserwelten", "city": "Bocholt"},
-    {"id": "baederhaus-bad-kreuznach", "name": "Bäderhaus Bad Kreuznach", "city": "Bad Kreuznach"},
-    {"id": "carolusthermen", "name": "Carolus Thermen", "city": "Aachen"},
-    {"id": "copacabackum", "name": "Copa Ca Backum (Copa Oase)", "city": "Herten"},
-    {"id": "das-bad-merzig", "name": "Das Bad Merzig", "city": "Merzig"},
-    {"id": "festland-hamburg", "name": "Festland (Bäderland)", "city": "Hamburg"},
-    {"id": "franken-therme", "name": "Franken-Therme", "city": "Bad Windsheim"},
-    {"id": "heveney", "name": "Freizeitbad Heveney", "city": "Witten"},
-    {"id": "kaifu-bad", "name": "Kaifu-Bad (Bäderland)", "city": "Hamburg"},
-    {"id": "kisssalis", "name": "KissSalis Therme", "city": "Bad Kissingen"},
-    {"id": "kristalltherme-bad-wilsnack", "name": "Kristall Therme Bad Wilsnack", "city": "Bad Wilsnack"},
-    {"id": "kristall-therme-schwangau", "name": "Königliche Kristall-Therme Schwangau", "city": "Schwangau"},
-    {"id": "lahn-dill-bergland-therme", "name": "Lahn-Dill-Bergland-Therme", "city": "Bad Endbach"},
-    {"id": "limes-therme", "name": "Limes-Therme (Römer-Sauna)", "city": "Bad Gögging"},
-    {"id": "obermaintherme", "name": "Obermain Therme", "city": "Bad Staffelstein"},
-    {"id": "ostsee-therme", "name": "Ostsee Therme", "city": "Scharbeutz"},
-    {"id": "panorama-therme-beuren", "name": "Panorama Therme Beuren", "city": "Beuren"},
-    {"id": "riff-bad-lausick", "name": "Riff Bad Lausick", "city": "Bad Lausick"},
-    {"id": "saarland-therme", "name": "Saarland Therme", "city": "Rilchingen-Hanweiler"},
-    {"id": "sieben-welten", "name": "Sieben Welten Therme & Spa Resort", "city": "Künzell (Fulda)"},
-    {"id": "wischlingen", "name": "Solebad Wischlingen", "city": "Dortmund"},
-    {"id": "soltau-therme", "name": "Soltau Therme", "city": "Soltau"},
-    {"id": "spessart-therme", "name": "Spessart Therme", "city": "Bad Soden-Salmünster"},
-    {"id": "suedpfalz-therme", "name": "Südpfalz Therme", "city": "Bad Bergzabern"},
-    {"id": "therme-bad-aibling", "name": "Therme Bad Aibling", "city": "Bad Aibling"},
-    {"id": "therme-bad-steben", "name": "Therme Bad Steben", "city": "Bad Steben"},
-    {"id": "therme-bad-woerishofen", "name": "Therme Bad Wörishofen", "city": "Bad Wörishofen"},
-    {"id": "therme-erding", "name": "Therme Erding", "city": "Erding"},
-    {"id": "westfalentherme", "name": "Westfalen-Therme", "city": "Bad Lippspringe"},
-    {"id": "wonnemar-sonthofen", "name": "WONNEMAR Sonthofen", "city": "Sonthofen"}
+    {"id": "obermaintherme", "name": "Obermain Therme", "city": "Bad Staffelstein"}
   ]
 }

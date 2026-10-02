@@ -39,6 +39,7 @@ class PlanModel {
     private var _pollIn as Number = 0;
     private var _statusTicks as Number = 0;
     private var _manual as Boolean = false;
+    private var _force as Boolean = false;
     private var _previousSauna as String?;
     private var _timer as Timer.Timer?;
 
@@ -53,7 +54,7 @@ class PlanModel {
     function start() as Void {
         _timer = new Timer.Timer();
         (_timer as Timer.Timer).start(method(:onTick), 10000, true);
-        fetchPlan(false);
+        fetchPlan(false, false);
     }
 
     // Mitgelieferte Daten ersetzen gespeicherte nur, wenn sie neuer sind
@@ -271,10 +272,11 @@ class PlanModel {
         }
         _previousSauna = saunaId();
         Application.Storage.setValue(KEY_SAUNA, id);
-        fetchPlan(true);
+        fetchPlan(true, false);
     }
 
-    function fetchPlan(manual as Boolean) as Void {
+    // manual: Rückmeldung in der Statuszeile; force: Website auch dann prüfen, wenn heute schon geprüft
+    function fetchPlan(manual as Boolean, force as Boolean) as Void {
         if (!System.getDeviceSettings().phoneConnected) {
             if (manual) {
                 setStatus("Kein Handy");
@@ -282,6 +284,7 @@ class PlanModel {
             return;
         }
         _manual = manual;
+        _force = force;
         _polls = 0;
         _pollIn = 0;
         _checking = false;
@@ -311,13 +314,13 @@ class PlanModel {
         return stored != null && stored["live"] == 1 && PlanStore.isOutdated(stored);
     }
 
-    // Tagespläne von gestern immer, sonst einmal am Tag oder auf Wunsch
+    // Tagespläne von gestern immer, sonst einmal am Tag je Sauna oder über „Plan aktualisieren“
     private function needsCheck() as Boolean {
-        if (isStale() || _manual) {
+        if (isStale() || _force) {
             return true;
         }
         var checked = Application.Storage.getValue(KEY_CHECKED);
-        return !(checked instanceof Array && saunaId().equals(checked[0]) && checked[1] == PlanStore.todayNumber());
+        return !(checked instanceof Dictionary && checked[saunaId()] == PlanStore.todayNumber());
     }
 
     private function startCheck() as Void {
@@ -367,7 +370,13 @@ class PlanModel {
             finishCheck((loading || _manual) ? "Fehler " + code : null);
             return;
         }
-        Application.Storage.setValue(KEY_CHECKED, [saunaId(), PlanStore.todayNumber()]);
+        // je Sauna merken, damit ein Wechsel hin und zurück nicht erneut prüft
+        var checked = Application.Storage.getValue(KEY_CHECKED);
+        if (!(checked instanceof Dictionary)) {
+            checked = {};
+        }
+        checked[saunaId()] = PlanStore.todayNumber();
+        Application.Storage.setValue(KEY_CHECKED, checked as Dictionary<Application.PropertyKeyType, Application.PropertyValueType>);
         _pollIn = POLL_TICKS;
     }
 

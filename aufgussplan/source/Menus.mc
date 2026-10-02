@@ -28,7 +28,7 @@ class MainMenuDelegate extends WatchUi.Menu2InputDelegate {
         if (id == :sauna) {
             WatchUi.pushView(new SaunaMenu(_model), new SaunaMenuDelegate(_model), WatchUi.SLIDE_LEFT);
         } else if (id == :refresh) {
-            _model.fetchPlan(true);
+            _model.fetchPlan(true, true);
             WatchUi.popView(WatchUi.SLIDE_DOWN);
         } else if (id == :lead) {
             item.setSubLabel(_model.cycleLead() + " min vorher");
